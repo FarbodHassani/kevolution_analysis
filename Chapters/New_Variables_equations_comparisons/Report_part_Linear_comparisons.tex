@@ -1,237 +1,237 @@
-%\documentclass[a4paper,12pt]{article}
-%%% My standard included packages
-%%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
-%%             % images in pdf, png or jpg format)
-%%\usepackage{jcappub} % for details on the use of the package, please
-%%                     % see the JCAP-author-manual
-%%\usepackage[T1]{fontenc} % if needed
-%
-%\usepackage{setspace}           % Allows easy changes to line spacing 
-%\usepackage{graphicx}           % Allows including of graphics files
-%\usepackage{amsmath}            % Additional math capabilities
-%\usepackage{marginnote}         % Used with todonotes package
-%\usepackage{datetime}           % Allows formatting of date and time
-%\newcommand {\be}{\begin{equation}}
-%\newcommand {\ee}{\end{equation}}
-%
-%\usepackage{empheq}
-%\usepackage{cancel}
-%\usepackage{etoolbox}
-%
-%
-%\usepackage{enumitem} 
-%\usepackage{color}
-%%Mathematica colors
-%\definecolor{identifiercolor}{rgb}{.4,.6,.56}
-%\definecolor{stringcolor}{gray}{0.5}
-%\definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
-%\usepackage{listings}
-%%Mathematica
-%\usepackage{listings}
-%\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
-%  breaklines=true,
-%  escapeinside={\%*}{*)},
-%  keywordstyle={\bfseries\color{inactivecolor}},
-%  stringstyle={\bfseries\color{stringcolor}},
-%  identifierstyle={\bfseries\color{identifiercolor}},
-%  language=Mathematica,
-%  otherkeywords={DiscretizeRegion},
-%  showstringspaces=false}
-%\renewcommand{\lstlistingname}{Listing}
-%
-%
-%
-%
-%\usepackage{amsmath}
-%\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
-%\usepackage{caption}
-%\usepackage{subcaption}
-%          % List formatting commands
-%\setlist{noitemsep}             % Remove space between list items 
-%%\usepackage{subfigure}          % Create numbered and captioned subfigures
-%\usepackage{rotating}           % Create landscape tables and figures
-%\usepackage[dvipsnames]{xcolor} % Refer to colors by name
-%\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
-%%\usepackage{hyperref}           % URLS and hyperlinks
-%\usepackage{float}              % Activate [H] option to place figure HERE
-%\usepackage[numbers]{natbib}
-%\usepackage{versionPO}          % Include text conditionally
-%\usepackage{caption}
-%%\usepackage[utf8]{inputenc}
-%%\usepackage[nottoc]{tocbibind}
-%\lstset{basicstyle=\ttfamily,
-%  showstringspaces=false,
-%  commentstyle=\color{red},
-%  keywordstyle=\color{blue}
+\documentclass[a4paper,12pt]{article}
+%% My standard included packages
+%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+%             % images in pdf, png or jpg format)
+%\usepackage{jcappub} % for details on the use of the package, please
+%                     % see the JCAP-author-manual
+%\usepackage[T1]{fontenc} % if needed
+
+\usepackage{setspace}           % Allows easy changes to line spacing 
+\usepackage{graphicx}           % Allows including of graphics files
+\usepackage{amsmath}            % Additional math capabilities
+\usepackage{marginnote}         % Used with todonotes package
+\usepackage{datetime}           % Allows formatting of date and time
+\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+
+\usepackage{empheq}
+\usepackage{cancel}
+\usepackage{etoolbox}
+
+
+\usepackage{enumitem} 
+\usepackage{color}
+%Mathematica colors
+\definecolor{identifiercolor}{rgb}{.4,.6,.56}
+\definecolor{stringcolor}{gray}{0.5}
+\definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
+\usepackage{listings}
+%Mathematica
+\usepackage{listings}
+\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
+  breaklines=true,
+  escapeinside={\%*}{*)},
+  keywordstyle={\bfseries\color{inactivecolor}},
+  stringstyle={\bfseries\color{stringcolor}},
+  identifierstyle={\bfseries\color{identifiercolor}},
+  language=Mathematica,
+  otherkeywords={DiscretizeRegion},
+  showstringspaces=false}
+\renewcommand{\lstlistingname}{Listing}
+
+
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
+\usepackage{caption}
+\usepackage{subcaption}
+          % List formatting commands
+\setlist{noitemsep}             % Remove space between list items 
+%\usepackage{subfigure}          % Create numbered and captioned subfigures
+\usepackage{rotating}           % Create landscape tables and figures
+\usepackage[dvipsnames]{xcolor} % Refer to colors by name
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
+%\usepackage{hyperref}           % URLS and hyperlinks
+\usepackage{float}              % Activate [H] option to place figure HERE
+\usepackage[numbers]{natbib}
+\usepackage{versionPO}          % Include text conditionally
+\usepackage{caption}
+%\usepackage[utf8]{inputenc}
+%\usepackage[nottoc]{tocbibind}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+% These next lines allow including or excluding different versions of text
+% using versionPO.sty
+\includeversion{notes}		% Include notes?
+%\excludeversion{notes}
+\excludeversion{comment}
+\includeversion{links}          % Turn hyperlinks on?
+\excludeversion{submit}		% Format for conference submission?
+\includeversion{toc}		% Include table of contents?
+%\graphicspath{{./Results1-Perihelionadvance}}
+
+% Turn off hyperlinking if links is excluded
+\iflinks{}{\hypersetup{draft=true}}
+
+% Notes options
+\ifnotes{%
+\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
+\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
+}{%
+\usepackage[margin=1in]{geometry}%
+\usepackage[disable]{todonotes}%
+}
+
+% Allow todonotes inside footnotes without blowing up LaTeX
+% Next command works but now notes can overlap. Instead, we'll define 
+% a special footnote note command that performs this redefinition.
+%\renewcommand{\marginpar}{\marginnote}%
+
+% Save original definition of \marginpar
+\let\oldmarginpar\marginpar
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
+% Packages included specifically for this document.
+\usepackage{texintro}           % Document-specific definitions
+\usepackage{tocvsec2}           % More flexible formatting of table of contents
+\usepackage{bibentry}           % Print full citation in text
+\nobibliography*                                % Allow use of \bibentry command
+\usepackage{tikz}             % Already included by todonotes
+\usetikzlibrary{matrix}
+\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
+                                           % allow enumitem to work.
+
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+% If you're including tocvsec2, do so before this command.
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
+
+% Number paragraphs and subparagraphs and include them in TOC
+%\setcounter{tocdepth}{2}
+
+\usepackage[affil-it]{authblk} 
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\bean{\begin{eqnarray*}}
+\def\eean{\end{eqnarray*}}
+\def\cd{\cdot}
+\def\vp{\varphi}
+\def\l {\langle}
+\def\re {\rangle}
+\def \dd {\partial}
+\def \ra {\rightarrow}
+\def \la {\lambda}
+\def \La {\Lambda}
+\def \De {\Delta}
+\def \DH {\Delta_{\rm HI}}
+\newcommand{\de}{\delta}
+\def \b {\beta}
+\def \al {\alpha}
+\def \ka {\kappa}
+\def \Ga {\Gamma}
+\def \ga {\gamma}
+\def \si {\sigma}
+\def \Si {\Sigma}
+\def \ep {\epsilon}
+\def \om {\omega}
+\def \Om {\Omega}
+\def \lap {\triangle}
+\def \ep {\epsilon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Special definitions for this paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\MyRed}{\color [rgb]{0.8,0,0}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
+\newcommand{\MyBrown}{\color [rgb]{0.8,0.4,0.1}}
+\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.6}}
+\def\GV#1{{\MyRed [GV: #1]}}
+\def\RD#1{{\MyGreen [RD:  {\tt #1}]}} 
+\def\RDt#1{{\MyGreen #1}}   
+\def\GM#1{{\MyBlue [GM: #1]}}  
+\def\GF#1{{\MyPurple [GF: #1]}}    
+
+
+
+\newcommand{\ie}{\emph{i. e.}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\eg}{\emph{e. g.}}
+
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\HH}{\mathcal H}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\newcommand{\bell}{\boldsymbol{\ell}}
+\newcommand{\bal}{\boldsymbol{\alpha}}
+
+
+
+
+
+%\usepackage{lmodern}
+%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
+\definecolor{astral}{RGB}{46,116,181}
+%\subsectionfont{\color{astral}}
+%\sectionfont{\color{astral}}
+%\usdate{17 May}                         % Use usual LaTeX date layout
+
+%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
+\title{\color{BlueViolet}\Huge{Just part of projects which should be added to the original version}}
+%\vskip 2em
+\author{Farbod Hassani}
+%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
+%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+
+%{farbod-hassani.com}} }
+%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
+%\title{\TitleFont Halo finder}
+%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
 %}
-%% These next lines allow including or excluding different versions of text
-%% using versionPO.sty
-%\includeversion{notes}		% Include notes?
-%%\excludeversion{notes}
-%\excludeversion{comment}
-%\includeversion{links}          % Turn hyperlinks on?
-%\excludeversion{submit}		% Format for conference submission?
-%\includeversion{toc}		% Include table of contents?
-%%\graphicspath{{./Results1-Perihelionadvance}}
-%
-%% Turn off hyperlinking if links is excluded
-%\iflinks{}{\hypersetup{draft=true}}
-%
-%% Notes options
-%\ifnotes{%
-%\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
-%\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
-%}{%
-%\usepackage[margin=1in]{geometry}%
-%\usepackage[disable]{todonotes}%
+%\thanks{farbod-hassani.com}}
+%\author[2]{Author E\thanks{E.E@university.edu}}
+%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+%\emailAdd{farbod.hassani@gmail.com}
+%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
+      %\begin{abstract}
+%This is abstract text: This simple document shows very basic features of \LaTeX{}.
+%\lstset { %
+%    language=C++,
+%    %backgroundcolor=\color{black!5}, % set backgroundcolor
+%    basicstyle=\footnotesize,% basic font settings
 %}
-%
-%% Allow todonotes inside footnotes without blowing up LaTeX
-%% Next command works but now notes can overlap. Instead, we'll define 
-%% a special footnote note command that performs this redefinition.
-%%\renewcommand{\marginpar}{\marginnote}%
-%
-%% Save original definition of \marginpar
-%\let\oldmarginpar\marginpar
-%% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
-%\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
-%% Packages included specifically for this document.
-%\usepackage{texintro}           % Document-specific definitions
-%\usepackage{tocvsec2}           % More flexible formatting of table of contents
-%\usepackage{bibentry}           % Print full citation in text
-%\nobibliography*                                % Allow use of \bibentry command
-%\usepackage{tikz}             % Already included by todonotes
-%\usetikzlibrary{matrix}
-%\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
-%                                           % allow enumitem to work.
-%
-%% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
-%% If you're including tocvsec2, do so before this command.
-%\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
-%
-%% Number paragraphs and subparagraphs and include them in TOC
-%%\setcounter{tocdepth}{2}
-%
-%\usepackage[affil-it]{authblk} 
-%\usepackage{etoolbox}
-%\usepackage{titlesec}
-%
-%\setcounter{secnumdepth}{4}
-%
-%\titleformat{\paragraph}
-%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-%\titlespacing*{\paragraph}
-%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-%
-%
-%\def\be{\begin{equation}}
-%\def\ee{\end{equation}}
-%\def\bea{\begin{eqnarray}}
-%\def\eea{\end{eqnarray}}
-%\def\bean{\begin{eqnarray*}}
-%\def\eean{\end{eqnarray*}}
-%\def\cd{\cdot}
-%\def\vp{\varphi}
-%\def\l {\langle}
-%\def\re {\rangle}
-%\def \dd {\partial}
-%\def \ra {\rightarrow}
-%\def \la {\lambda}
-%\def \La {\Lambda}
-%\def \De {\Delta}
-%\def \DH {\Delta_{\rm HI}}
-%\newcommand{\de}{\delta}
-%\def \b {\beta}
-%\def \al {\alpha}
-%\def \ka {\kappa}
-%\def \Ga {\Gamma}
-%\def \ga {\gamma}
-%\def \si {\sigma}
-%\def \Si {\Sigma}
-%\def \ep {\epsilon}
-%\def \om {\omega}
-%\def \Om {\Omega}
-%\def \lap {\triangle}
-%\def \ep {\epsilon}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%Special definitions for this paper
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\newcommand{\MyRed}{\color [rgb]{0.8,0,0}}
-%\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
-%\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
-%\newcommand{\MyBrown}{\color [rgb]{0.8,0.4,0.1}}
-%\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.6}}
-%\def\GV#1{{\MyRed [GV: #1]}}
-%\def\RD#1{{\MyGreen [RD:  {\tt #1}]}} 
-%\def\RDt#1{{\MyGreen #1}}   
-%\def\GM#1{{\MyBlue [GM: #1]}}  
-%\def\GF#1{{\MyPurple [GF: #1]}}    
-%
-%
-%
-%\newcommand{\ie}{\emph{i. e.}}
-%\newcommand{\cf}{\emph{cf.}}
-%\newcommand{\etal}{\emph{et al.}\xspace}
-%\newcommand{\eg}{\emph{e. g.}}
-%
-%\newcommand{\Scal}{\mathcal S}
-%\newcommand{\DD}{\mathcal D}
-%\newcommand{\EE}{\mathcal E}
-%\newcommand{\MM}{\mathcal M}
-%\newcommand{\HH}{\mathcal H}
-%
-%\newcommand{\Real}{\mathbb{R}}
-%\newcommand{\bn}{\boldsymbol{n}}
-%\newcommand{\bv}{\boldsymbol{v}}
-%\newcommand{\bx}{\boldsymbol{x}}
-%\newcommand{\bnabla}{\boldsymbol{\nabla}}
-%\newcommand{\bell}{\boldsymbol{\ell}}
-%\newcommand{\bal}{\boldsymbol{\alpha}}
-%
-%
-%
-%
-%
-%%\usepackage{lmodern}
-%%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
-%%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
-%%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
-%%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
-%\definecolor{astral}{RGB}{46,116,181}
-%%\subsectionfont{\color{astral}}
-%%\sectionfont{\color{astral}}
-%%\usdate{17 May}                         % Use usual LaTeX date layout
-%
-%%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
-%\title{\color{BlueViolet}\Huge{Just part of projects which should be added to the original version}}
-%%\vskip 2em
-%\author{Farbod Hassani}
-%%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
-%%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
-%%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
-%
-%%{farbod-hassani.com}} }
-%%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
-%%\title{\TitleFont Halo finder}
-%%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
-%%}
-%%\thanks{farbod-hassani.com}}
-%%\author[2]{Author E\thanks{E.E@university.edu}}
-%%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
-%%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
-%%\emailAdd{farbod.hassani@gmail.com}
-%%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
-%      %\begin{abstract}
-%%This is abstract text: This simple document shows very basic features of \LaTeX{}.
-%%\lstset { %
-%%    language=C++,
-%%    %backgroundcolor=\color{black!5}, % set backgroundcolor
-%%    basicstyle=\footnotesize,% basic font settings
-%%}
-%\begin{document}
+\begin{document}
 \section{Initial condition in class and Gevolution}
 \paragraph{ Comparing the initial condition from class and what is implemented in Gevolution}
 To make sure that the Gevolution  realizes the file from class, we turn off the main loop of the Gevolution and just realize the fields $\pi$ and $\zeta$ and compare the output transfer function from Gevolution with the one from class
@@ -293,187 +293,6 @@ plt.show()
  \includegraphics[scale=0.4]{IC_test.jpg} 
  \end{figure}
 
-\paragraph{By corrector methods check the errors on variables}
-This is an important part which should be done to have the errors propagation under the control! \\
-For example we need to check if $\zeta$ at step n is computed correctly? 
-The best way to do it is first to check that $\zeta_n$ from the next order corrector is  near to original one (like the relative error $2\frac{\zeta_1-\zeta_2}{\zeta_1+\zeta_2}<0.01$, which gives less than 1$\%$ error).  So what we are doing to do is using the $\zeta_n$  from the one of the following formulas (or the average maybe?)
- \be
-    \zeta_{n} = \zeta_{n-\frac{1}{2}}+ \zeta'_{n} \Delta \tau/2 + \mathcal{O}(\Delta \tau^2)
-    \ee 
-    or
- \be
-    \zeta_{n} = \zeta_{n+\frac{1}{2}} - \zeta'_{n} \Delta \tau/2+ \mathcal{O}(\Delta \tau^2)
-    \ee 
-    or 
-     \be
-    \zeta_{n} =\frac{ \zeta_{n+\frac{1}{2}} + \zeta_{n-\frac{1}{2}}  }{2}+ \mathcal{O}(\Delta \tau^2)
-    \ee 
-    The last one is also at the same order because it is obtained by sum of the first two formulas.\\ 
-    So by using  $ \zeta'_{n} $ and  $\zeta_{n-}$ we compute  $\zeta_{n-\frac{1}{2}}$ from the below formula
- \be
-     \zeta_{n-\frac{1}{2}} = \zeta_{n} - \zeta'_{n} \Delta \tau/2
- \ee
-  then from the new $ \zeta_{n-\frac{1}{2}}$ we use the differential equation to get new $ \zeta_{n+\frac{1}{2}}$ according to ,
-      \be
-   \zeta_{n+\frac{1}{2}}= \frac{1}{1-  3   \mathcal{H}_{n} w \Delta \tau/2 } \Bigg[ \zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n}\Big( \frac{ w\zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n} \Big)  -c_s^2(   3 \mathcal{H}^2_{n} 
-  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg) \Bigg]
-  \ee
-  Then again we compute $\zeta_n$ by new $\zeta_{n+\frac{1}{2}}$ and $\zeta_{n-\frac{1}{2}}$ and check the error, then we continue the loop until we get the desired precision on the variable. \\
-  The code for predictor corrector method in C++ is written as follwing, note that all the lines have comments make the code easier to follow,
-   \begin{lstlisting}[language=C++,
-  basicstyle=\tiny]
-	template <class FieldType>
-			void update_zeta(double dtau, double dx,double a, Field<FieldType> & phi, Field<FieldType> & phi_old, Field<FieldType> & chi,Field<FieldType> & chi_old, Field<FieldType> & pi_k, Field<FieldType> & zeta_half , Field<FieldType> & zeta_integer, double Omega_fld ,double w, double cs2, double Hcon, double & Hcon_old)
-			{
-			  double CoeffI, CoeffII, H_prime, psi, psi_old, psi_prime, phi_prime, Laplacian_pi, zeta_old_half, zeta_prime_int_n0, zeta_check ;
-        //Predictor-corrector variables
-        double zeta_predictor_int_n0, zeta_predictor_half_n0, zeta_predictor_half_n1;
-        int numerator=1, n_correcor_steps=10;
-        H_prime= (Hcon-Hcon_old)/dtau; //H_prime(n) at step n
-        CoeffI = 1./(1. - dtau * 3. * w * Hcon/2. );
-        CoeffII = cs2 * (3. * Hcon * Hcon - 3. * H_prime );
-
-				Site x(phi.lattice());
-				for (x.first(); x.test(); x.next())
-					{
-            //Everything here is at step n except zeta which is at half steps! zeta is like pi_v
-						Laplacian_pi=pi_k(x-0) + pi_k(x+0) - 2. * pi_k(x);
-						Laplacian_pi+=pi_k(x+1) + pi_k(x-1)- 2. * pi_k(x);
-						Laplacian_pi+=pi_k(x+2) + pi_k(x-2)- 2. * pi_k(x);
-            Laplacian_pi=Laplacian_pi/(dx*dx);
-						psi=phi(x) - chi(x);
-						psi_prime= ((phi(x) - chi(x))-(phi_old(x) - chi_old(x)))/dtau; //psi_prime(n)
-					  phi_prime= (phi(x) - phi_old(x))/dtau; //phi_prime(n)
-						//Full Linear terms, zeta at step n+1/2
-            zeta_old_half=zeta_half(x); // zeta(n-1/2)
-            zeta_half(x)= CoeffI * ( zeta_half(x) + dtau * ( 3. * Hcon * ( w * zeta_half(x)/2. + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi) ); // zeta(n+1/2) from zeta(n-1/2) and zeta'(n)
-            // computing zeta (n) by taking average ove zeta(n+1/2) and zeta(n-1/2)
-            //Zeta Check!
-            zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n)
-
-            //Predictor-Corrector method:
-
-            for (int i=1; i<n_correcor_steps+1; i++)
-            {
-            // Initiation of the method from the last loop
-            zeta_predictor_int_n0 = zeta_integer(x);  //zeta (n+0) = (zeta(n-1/2)+zeta(n+1/2)) /2
-            // claculating zeta'(n) from the new values after correction
-            zeta_prime_int_n0=( 3. * Hcon * ( w * zeta_predictor_int_n0 + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi); // zeta'(n), Having zeta' at step (n), so all the variables are at step (n)
-            zeta_predictor_half_n0 =  zeta_predictor_int_n0 -  zeta_prime_int_n0 * dtau/2.;    //zeta(n-1/2) = zeta(n) - zeta'(n) * Delta tau/2
-            // Now from the new values at steps (n-1/2) and n we compute the new value at n+1/2
-            zeta_predictor_half_n1= CoeffI * ( zeta_predictor_half_n0 + dtau * ( 3. * Hcon * ( w * zeta_predictor_half_n0/2. + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi) ); // zeta_corrected(n+1/2) from zeta(n-1/2) and zeta'(n)
-            zeta_predictor_int_n0= (zeta_predictor_half_n1 + zeta_predictor_half_n0)/2.; //zeta(n) =[zeta(n+1/2)+zeta(n-1/2)]/2
-            // Now we must check the relative error between the new zeta_half(x)=zeta_predictor_half_n1, zeta_integer(x)=zeta_predictor_int_n0 and the previous step: zeta_half(x), zeta_integer(x)
-            if (2.* abs(zeta_integer(x)-zeta_predictor_int_n0)/(zeta_integer(x)+zeta_predictor_int_n0)<1.e-6 &&  2.* abs(zeta_half(x)-zeta_predictor_half_n1)/(zeta_half(x)+zeta_predictor_half_n1) < 1.e-6)break;
-             // If the relative error between the values between two successive steps are less than 1% the method is stopped
-             // Since the new variables are more precise we use them as a new value of the fields on the lattice
-             zeta_old_half=zeta_predictor_half_n0; // zeta(n-1/2) after correction
-             zeta_half(x)=zeta_predictor_half_n1; // zeta(n+1/2) after correction
-             zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n) after correction
-             numerator++;
-            }
-            if (numerator==n_correcor_steps) cout << "\033[1;31mbold WARNING: PRECISION ERROR ON KESSENCE FIELD ZETA, More than 1% Error\033[0m\n" << '\n';
-            // computing zeta (n) by zeta(n)=zeta(n-1/2)+ zeta'(n) dtau/2.
-            // cout<< abs((zeta_integer(x)-zeta_check)/(zeta_integer(x))) << '\n';
-            // if (numerator>1) cout<<"The number of steps to converge: "<<numerator<<endl;
-
-          }
-          //Since we have n_kess updates we must put Hcon_old=Hcon;
-          Hcon_old=Hcon;
-        }
-
-\end{lstlisting}
-The result for $\zeta$ is that  after one iteration the next corrected $\zeta_n$  just make $10^{-16}$ difference, but as it is clear the code is intelligent and after converging about $0.01\%$ stop the loop and if it does not stop after some tries we get precision error! \\
-For the $\pi$ since we do not have any inter/extrarpolation we do not need to use predictor corrector method, moreover we cannot do anything about $\Psi$ and $\Phi$ which are updated somewhere else after the kessence loop, if we need better precision for $\Psi$ and $\Phi$ we need to use corrector method in the particles loop to get more precise $\Psi$...\\
-We update the fields in the main file as following ({\color{red} {Not a good way, since fields and particles are not synched for example at first loop. Instead we can use the  reasoning in the paragraph after the code to make it better and synched with particles!}})
-\begin{lstlisting}[language=C++,
-  basicstyle=\tiny]
-  //**********************
-//Kessence - LeapFrog:START
-//**********************
-double a_kess=a;
-double Hconf_old= Hconf(a_kess, fourpiG, cosmo);
-// In the first cycle we update zeta to get zeta at 1/2 to use it for leapfrog.
-if(cycle==0)
-{
-	for (i=0;i<sim.nKe_numsteps;i++)
-	{
-
-     update_zeta(0.5 * dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_old);
-		 zeta_half.updateHalo();
-     zeta_integer.updateHalo();
-     
-	}
-}
-
-// For other cycles we just update accoring to leapfrog, zeta at half steps and pi at integet steps
-else
-{
-	for (i=0;i<sim.nKe_numsteps;i++)
-	{
-    //First we update zeta to have it at n+1/2
-    update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_old);
-    zeta_half.updateHalo();
-    zeta_integer.updateHalo();
-    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0 );
-    //Now we update pi_k
-		update_pi_k(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_old);
-		pi_k.updateHalo();
-		rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0);
-	}
-}
-//**********************
-//Kessence - LeapFrog: End
-//**********************
-  \end{lstlisting}
-  It is super important to know how update the fields in the first loop to be consistent! \\ of course the last main loop which updates the $\zeta$ for half step in the first loop does not seem to work. Instead we use the following procedure at the first loop. We just assume that $\zeta^{-1/2} \approx \zeta^{(0)}$ which is more or less true if we start from high enough redshift, but we use corrector method to get the correct $\zeta^{(1/2)}$ ,
-    \be
-  \zeta^{(1/2)} = \zeta^{(-1/2)} - \zeta'^{(0)} d \tau
-  \ee
-  So before starting the loop over the scalar field we update the $\zeta$ to have the value at step $1/2$ and now we can put them into the loop and get all the values which are synched with particles! This is the same as just updating $\zeta$ and $\pi$ without caring about first loop!! Before we updated $\pi'$ first by half step then we updated $\pi$ in next loops we have updated the $\pi$ so these two fields were not synched with particles! But now instead we just make an assumption which is very well under control by corrector method and instead we get the values of the fields at integer steps synched with particles even at first loop! But it is clear that we might make a mistake at first loop because of the fact that we don't have $\Phi'$...
- \\
- At the end we have the following main part,
- \begin{lstlisting}[language=C++,
-  basicstyle=\tiny]
-  //**********************
-//Kessence - LeapFrog:START
-//**********************
-double a_kess=a;
-	for (i=0;i<sim.nKe_numsteps;i++)
-	{
-	
-	    if(cycle==0)
-    {
-      for (x.first(); x.test(); x.next()) // Since int he first loop zeta_half is taken zero to not make a lot of mistake we take it equal to the half next step of it i.e zeta^0 but just for the first loop!
-      {
-        zeta_half(x) =zeta_integer(x);
-      }
-    }
-
-    //First we update zeta to have it at n+1/2
-    update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
-    // By assuming that we have zeta^{-1/2} which is equal to \zeta^0 we get zeta^{1/2} by updating it by dtau and using zeta' (0)
-    // In sum: zeta(1/2) = zeta(-1/2)=zeta(0) + zeta'(0) dtau for the first loop
-    //Then we use Corrector method to correct the zeta(0) by using new values ... to make sure that we dont make alot of mistakes.
-    //After this update we have zeta(1/2) and zeta(1)
-    zeta_half.updateHalo();
-    zeta_integer.updateHalo();
-    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0 );
-    //Now we update pi_k
-		update_pi_k(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_prime(a_kess, fourpiG, cosmo)); // H_old is updated here in the function
-		pi_k.updateHalo();
-		rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0);
-	}
-}
-#ifdef BENCHMARK
-    kessence_update_time += MPI_Wtime() - ref_time;
-    ref_time = MPI_Wtime();
-#endif
-//**********************
-//Kessence - LeapFrog: End
-//**********************
-  \end{lstlisting}
-  One more thing is that we need to use $update.halo$ just when we want to take derivatives or want to know the value of the field in some neighbourhoods at one loop, which means that the cpu's must share their information in the boundaries!
   
 \subsubsection{Mathematica solution from class initial condition and comparing with class}
 We solve the two linear differential equations in mathematica from class initial condition and then we compare with the class results at different redshifts. The below code solve the two ODE numerically,\
@@ -542,7 +361,7 @@ It is possible to get nothing! But it is good to solve in Gevolution and mathema
 
 
   
- \paragraph{The evolution comparisons and tests}
+ \section{The evolution comparisons and tests}
 The complete comparison at z=10 gives,
    \begin{figure}[H]
  \includegraphics[scale=0.4]{math_IC_01} 
@@ -887,7 +706,7 @@ We try to make an initial condition for the Gevolution to compare the results di
 %\be
 %\pi'=\zeta- \pi 
 %\ee
-   \subsubsection{Lets reconsider the equations again}
+   \subsection{Euler method,  equations without potentials}
    Now we know why in the low wavenumbers we got different results, because the sign of $\zeta$ in the class initial condition file changes sign in that wavenumbers, so that is why we got different solution there!\\ Now after this important discovery, we can reconsider the first equation which we were not satisfied as following, so we try to solve this equation in mathematica and Gevolution by wrong initial condition which $\zeta$ is positive in all k and the reason is because we want to use the Gevolution output as an initial condition of mathematica code to have control of the error!\\
    This is the field equation without the effect of gravity (the effect of particles are set to zero) so we expect to get exact result!
   \begin{align} 
@@ -896,53 +715,415 @@ We try to make an initial condition for the Gevolution to compare the results di
   \be
   \pi'=\zeta-\mathcal{H} \pi 
   \ee
-\subparagraph{fifth equation:}
-Now lets consider more terms in the equation as following. The reason we first consider this equation is that our guess is that the error does not come from $\nabla^2 \pi$ term but the term which has $\mathcal{H}'$!
- \be
-\zeta^{(n+1)} = \zeta^{(n)} + d \tau ( 3 \mathcal{H} w \zeta^{(n)}  + c_s^2 \nabla^2 \pi^{(n)})
-\ee
-\be
-\pi^{(n+1)} = \pi^{(n)} + d \tau ( \zeta^{(n)} -\mathcal{H} \pi^{(n)}    )
-\ee
 We know that the error from $\nabla^2$ is so much for small number of grids, so we want to see also how much it improves if we take larger number of grids!\\
-{\color{red} NOTE: when we have  spatial derivatives we need to halo update after evolving the field, otherwise everything is messed up! Since I forgot to halo update, I got wrong answers!}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\paragraph{Leap-frog method: Scalar field only equation}
-  \paragraph{Euler method: Full equation}
-For the Euler we have the following relations in the loops,
+{\color{red} NOTE: when we have  spatial derivatives we need to halo update after evolving the field, otherwise everything is messed up! Since I forgot to halo update, I got wrong answers!}\\
+We solve the top equations with Euler method,
 \be
-\zeta^{(n+1)} = \zeta^{(n)} + d \tau ( c_s^2 \nabla^2 \pi^{(n)})
+\zeta^{(n+1)} = \zeta^{(n)} + d \tau ( 3 \mathcal{H} w \zeta^{(n)}  -c_s^2  ( 3 \mathcal{H}^2 - 3 \mathcal{H}' ) \pi^{(n)}  +c_s^2 \nabla^2 \pi^{(n)})
 \ee
 \be
 \pi^{(n+1)} = \pi^{(n)} + d \tau ( \zeta^{(n)} -\mathcal{H} \pi^{(n)}    )
 \ee
- 
-So we compare the relative error between mathematica solution and Gevolution for Euler solver, for different precision parameters! To do so, we have made a separate Gevolution file which Euler method is implemented
-\paragraph{Leap-frog method: Full equation}
+After solving we get very good and consistent results as following,
+   \begin{figure}[H]
+ \includegraphics[scale=0.3]{Result_fields_only_01} 
+ \end{figure}
+    \begin{figure}[H]
+ \includegraphics[scale=0.3]{Result_fields_only_02} 
+ \end{figure}
+   \begin{figure}[H]
+ \includegraphics[scale=0.3]{Result_fields_only_04} 
+ \end{figure}
+    \begin{figure}[H]
+ \includegraphics[scale=0.3]{Result_fields_only_03} 
+ \end{figure}
+So the message is, to increase the overall precision we need to increase number of kessence update while to get better batch specially for high wavenumbers we need to increase the number of grids, since the laplace term is computed better! \\ On the other hand we can also check the corrector predictor method as well.
+To solve the following equations we apply leap frog method in the below to solve it,
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Leap-frog method, equations without potentials (First loop is tricky!)}
+Now lets try to do the same procedure but with Leap frog solver, this could be very good confirmation of Leap frog method, since we can check the error versus Euler method and look for possible bugs in the code!
+ \paragraph{$\zeta$ equation}
+  \be
+  \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} + \zeta'_{n} \Delta \tau
+  \ee
+  where $ \zeta'_{n}$ reads from the differential equation as following,
+  \be
+  \zeta'_{n}=3 \mathcal{H}_{n}(w \zeta_{n} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
+  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n}
+    \ee
+    Since we need to have $\zeta_n$ at $\zeta'_n$ so we write $\zeta_{n} = \frac{\zeta_{n+1/2} + \zeta_{n-1/2} }{2}$ \\ 
+    We get,
+      \be
+  \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg [3 \mathcal{H}_{n}(w\frac{\zeta_{n+\frac{1}{2}} + \zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
+  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg] 
+  \ee
+  Simplifying the expression gives,
+  \be
+   \zeta_{n+\frac{1}{2}}= \frac{1}{1-  3   \mathcal{H}_{n} w \Delta \tau/2 } \Bigg[ \zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n}\Big( \frac{ w\zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n} \Big)  -c_s^2(   3 \mathcal{H}^2_{n} 
+  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg) \Bigg]
+  \ee
+    So we get $\zeta_{n+1/2}$ and to get $\zeta_n$ which is sychronized with $\pi_n$ and particles, we use the below  prediction,
+    \be
+    \zeta_{n} = \zeta_{n-\frac{1}{2}}+ \zeta'_{n} \Delta \tau/2
+    \ee 
+    or 
+    \be
+        \zeta_{n} = \zeta_{n+\frac{1}{2}}- \zeta'_{n} \Delta \tau/2
+    \ee
+    or taking the average which is a bad estimation,
+    \be
+       \zeta_{n} = \frac{   \zeta_{n+1/2}  +    \zeta_{n-1/2} }{2}
+    \ee
+    
+    To take control over the error we check that the difference between the two $\zeta_n$ is small enough at each loop, otherwise we get precision warning ({\color{red} { What is the precision  we need?} Less than 0.1$\%$ is fair enough } )! \\
+    It is important to note that we update $\zeta$ in half steps while we interpolate it in integer steps just to have it synchronized with other fields.
+    
+    \paragraph{$\pi$ equation}
+ for the $\pi$ equation we have,
+    \be
+      \pi_{n+1}=\pi_{n} + \pi'_{n+\frac{1}{2}} \Delta \tau
+    \ee
+     \be
+  \pi'_{n+\frac{1}{2}}=\zeta_{n+\frac{1}{2}}  -\mathcal{H}_{n+\frac{1}{2}}  \pi_{n+\frac{1}{2}}  +\Psi_{n+\frac{1}{2}} 
+      \ee
+      For the background part it is better to update background before this step to have $a_{kess}$ at (n+1/2) and then having $\mathcal{H}(n+1/2)$
+      Just note that making $\zeta$ updating at half steps help us because we need all the terms at integer steps. \\
+      Since the scalar field Stress energy tensor must be synchronized with particles stress tensor, we need to have all the variables at the same step which is $n$, so we need to write all the terms at step ${n+\frac{1}{2}} $ in terms of the values at step $n$ and $n+1$ as following, of course except $\zeta$ which we have it at $n+1/2$. The easiest model to calculate $F_{{n+\frac{1}{2}} }$ is by taking average of the next and last step, so
+     \be
+     \pi_{n+\frac{1}{2}} = \frac{ \pi_{n+1} + \pi_{n} }{2 }
+     \ee
+     and the same for all the other variables at step ${n+\frac{1}{2}}$. 
+     
+     For $\pi$ we have,
+     \be
+      \pi_{n+1}= \pi_{n} + \Delta  \tau \Big [  \zeta_{n+\frac{1}{2}}   -\mathcal{H}_{n+\frac{1}{2}}  ( \frac{ \pi_{n+1} + \pi_{n} }{2 })  +\Psi_{n+\frac{1}{2}} \Big ]
+     \ee
+         \be
+      \pi_{n+1}=  \frac{1}{1+ \mathcal{H}_{n+\frac{1}{2}} \Delta \tau/2}\Bigg[ \pi_{n} + \Delta \tau \Big [  \zeta_{n+\frac{1}{2}}   -\mathcal{H}_{n+\frac{1}{2}}   \frac{  \pi_{n} }{2 } +\Psi_{n+\frac{1}{2}}  \Big ] \Bigg]
+     \ee
+   As it is clear from the formula we don't have access to the $\mathcal{H}_{n+\frac{1}{2}}$ and $\Psi_{n+\frac{1}{2}} $, so we use the extrapolation  to have them in next half steps,
+   \begin{align}
+   \mathcal{H}_{n+\frac{1}{2}} = \mathcal{H}_{n} + \mathcal{H}'_{n} \frac{d \tau}{2} \\
+      \Psi_{n+\frac{1}{2}} = \Psi_{n} + \Psi'_{n} \frac{d \tau}{2} 
+   \end{align} 
+   Or we need to write a new function for $\mathcal{H}$ to compute exactly at any step we need.
+   Moreover to have $\Psi'_{n}$ we must use the following formula by saving $\Psi$ at two different steps!
+   \be
+   \Psi'_{n} = \frac{\Psi_{n} - \Psi_{n-1} }{d \tau}
+   \ee
+   \\
+   \subsubsection{Results}
+   So if we let the potentials and the derivative of the potentials to zero, we just deal with only scalar field equation. Note that for the first loop we approximate as following,
+   \be
+   \zeta^{(+1/2)} =  \zeta^{(-1/2)} +  \zeta'^{(0)} \Delta \tau
+   \ee
+   Since we do not have $ \zeta^{(-1/2)}$, we use the below approximation,
+   \be
+\zeta^{(-1/2)} = \zeta^{(0)} - \zeta'^{(0)} \Delta \tau/2
+   \ee
+   So we have,
+     \be
+   \zeta^{(+1/2)} =   \zeta^{(0)} - \zeta'^{(0)} \Delta \tau/2 +  \zeta'^{(0)} \Delta \tau =  \zeta^{(0)} +  \zeta'^{(0)} \Delta \tau/2
+   \ee
+   which basically means that just update $\zeta$ for the half step in the first loop and then update $\pi$ from (0) to (1)  by the values at step (1/2) and (0) and also update $\zeta$ to (1/2) by the value which is already computed at $\zeta^{(-1/2)}$. The result is very intresting which follows the same rule we had for Euler solver which by increaseing number of kessence update we get less error and by increasing number of grids we get better result for high wavenumbers because of $\nabla^2$ term,
+      \begin{figure}[H]
+ \includegraphics[scale=0.3]{LeapFrog_fieldonly_01} 
+ \end{figure}
+     \begin{figure}[H]
+ \includegraphics[scale=0.3]{LeapFrog_fieldonly_02} 
+ \end{figure}
+     \begin{figure}[H]
+ \includegraphics[scale=0.3]{LeapFrog_fieldonly_03} 
+ \end{figure}
+     \begin{figure}[H]
+ \includegraphics[scale=0.3]{LeapFrog_fieldonly_04} 
+ \end{figure}
+
+
+\subsubsection{By corrector methods check the errors on variables (\color{red} Does not work for linear equation)}
+This is an important part which should be done to have the errors propagation under the control! \\
+For example we need to check if $\zeta$ at step n is computed correctly? 
+The best way to do it is first to check that $\zeta_n$ from the next order corrector is  near to original one (like the relative error $2\frac{\zeta_1-\zeta_2}{\zeta_1+\zeta_2}<0.01$, which gives less than 1$\%$ error).  So what we are doing to do is using the $\zeta_n$  from the one of the following formulas (or the average maybe?)
+ \be
+    \zeta_{n} = \zeta_{n-\frac{1}{2}}+ \zeta'_{n} \Delta \tau/2 + \mathcal{O}(\Delta \tau^2)
+    \ee 
+    or
+ \be
+    \zeta_{n} = \zeta_{n+\frac{1}{2}} - \zeta'_{n} \Delta \tau/2+ \mathcal{O}(\Delta \tau^2)
+    \ee 
+    or 
+     \be
+    \zeta_{n} =\frac{ \zeta_{n+\frac{1}{2}} + \zeta_{n-\frac{1}{2}}  }{2}+ \mathcal{O}(\Delta \tau^2)
+    \ee 
+    The last one is also at the same order because it is obtained by sum of the first two formulas.\\ 
+    So by using  $ \zeta'_{n} $ and  $\zeta_{n-}$ we compute  $\zeta_{n-\frac{1}{2}}$ from the below formula
+ \be
+     \zeta_{n-\frac{1}{2}} = \zeta_{n} - \zeta'_{n} \Delta \tau/2
+ \ee
+  then from the new $ \zeta_{n-\frac{1}{2}}$ we use the differential equation to get new $ \zeta_{n+\frac{1}{2}}$ according to ,
+      \be
+   \zeta_{n+\frac{1}{2}}= \frac{1}{1-  3   \mathcal{H}_{n} w \Delta \tau/2 } \Bigg[ \zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n}\Big( \frac{ w\zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n} \Big)  -c_s^2(   3 \mathcal{H}^2_{n} 
+  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg) \Bigg]
+  \ee
+  Then again we compute $\zeta_n$ by new $\zeta_{n+\frac{1}{2}}$ and $\zeta_{n-\frac{1}{2}}$ and check the error, then we continue the loop until we get the desired precision on the variable. \\
+  The code for predictor corrector method in C++ is written as follwing, note that all the lines have comments make the code easier to follow, \\
+  {\color{red} Note: The predictor corrector method does not give a better solution for linear equation and if we put the new result of the loops we can see that mathematically we are doing nothing in each push and backward. }
+   \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+	template <class FieldType>
+			void update_zeta(double dtau, double dx,double a, Field<FieldType> & phi, Field<FieldType> & phi_old, Field<FieldType> & chi,Field<FieldType> & chi_old, Field<FieldType> & pi_k, Field<FieldType> & zeta_half , Field<FieldType> & zeta_integer, double Omega_fld ,double w, double cs2, double Hcon, double & Hcon_old)
+			{
+			  double CoeffI, CoeffII, H_prime, psi, psi_old, psi_prime, phi_prime, Laplacian_pi, zeta_old_half, zeta_prime_int_n0, zeta_check ;
+        //Predictor-corrector variables
+        double zeta_predictor_int_n0, zeta_predictor_half_n0, zeta_predictor_half_n1;
+        int numerator=1, n_correcor_steps=10;
+        CoeffI = 1./(1. - dtau * 3. * w * Hcon/2. );
+        CoeffII = cs2 * (3. * Hcon * Hcon - 3. * H_prime );
+
+				Site x(phi.lattice());
+				for (x.first(); x.test(); x.next())
+					{
+            //Everything here is at step n except zeta which is at half steps! zeta is like pi_v
+						Laplacian_pi=pi_k(x-0) + pi_k(x+0) - 2. * pi_k(x);
+						Laplacian_pi+=pi_k(x+1) + pi_k(x-1)- 2. * pi_k(x);
+						Laplacian_pi+=pi_k(x+2) + pi_k(x-2)- 2. * pi_k(x);
+            Laplacian_pi=Laplacian_pi/(dx*dx);
+						psi=phi(x) - chi(x);
+						psi_prime= ((phi(x) - chi(x))-(phi_old(x) - chi_old(x)))/dtau; //psi_prime(n)
+					  phi_prime= (phi(x) - phi_old(x))/dtau; //phi_prime(n)
+						//Full Linear terms, zeta at step n+1/2
+            zeta_old_half=zeta_half(x); // zeta(n-1/2)
+            zeta_half(x)= CoeffI * ( zeta_half(x) + dtau * ( 3. * Hcon * ( w * zeta_half(x)/2. + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi) ); // zeta(n+1/2) from zeta(n-1/2) and zeta'(n)
+            // computing zeta (n) by taking average ove zeta(n+1/2) and zeta(n-1/2)
+            //Zeta Check!
+            zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n)
+
+            //Predictor-Corrector method:
+
+            for (int i=1; i<n_correcor_steps+1; i++)
+            {
+            // Initiation of the method from the last loop
+            zeta_predictor_int_n0 = zeta_integer(x);  //zeta (n+0) = (zeta(n-1/2)+zeta(n+1/2)) /2
+            // claculating zeta'(n) from the new values after correction
+            zeta_prime_int_n0=( 3. * Hcon * ( w * zeta_predictor_int_n0 + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi); // zeta'(n), Having zeta' at step (n), so all the variables are at step (n)
+            zeta_predictor_half_n0 =  zeta_predictor_int_n0 -  zeta_prime_int_n0 * dtau/2.;    //zeta(n-1/2) = zeta(n) - zeta'(n) * Delta tau/2
+            // Now from the new values at steps (n-1/2) and n we compute the new value at n+1/2
+            zeta_predictor_half_n1= CoeffI * ( zeta_predictor_half_n0 + dtau * ( 3. * Hcon * ( w * zeta_predictor_half_n0/2. + cs2 * psi ) - CoeffII * pi_k(x) + 3. * cs2 * phi_prime + cs2 * Laplacian_pi) ); // zeta_corrected(n+1/2) from zeta(n-1/2) and zeta'(n)
+            zeta_predictor_int_n0= (zeta_predictor_half_n1 + zeta_predictor_half_n0)/2.; //zeta(n) =[zeta(n+1/2)+zeta(n-1/2)]/2
+            // Now we must check the relative error between the new zeta_half(x)=zeta_predictor_half_n1, zeta_integer(x)=zeta_predictor_int_n0 and the previous step: zeta_half(x), zeta_integer(x)
+            if (2.* abs(zeta_integer(x)-zeta_predictor_int_n0)/(zeta_integer(x)+zeta_predictor_int_n0)<1.e-6 &&  2.* abs(zeta_half(x)-zeta_predictor_half_n1)/(zeta_half(x)+zeta_predictor_half_n1) < 1.e-6)break;
+             // If the relative error between the values between two successive steps are less than 1% the method is stopped
+             // Since the new variables are more precise we use them as a new value of the fields on the lattice
+             zeta_old_half=zeta_predictor_half_n0; // zeta(n-1/2) after correction
+             zeta_half(x)=zeta_predictor_half_n1; // zeta(n+1/2) after correction
+             zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n) after correction
+             numerator++;
+            }
+            if (numerator==n_correcor_steps) cout << "\033[1;31mbold WARNING: PRECISION ERROR ON KESSENCE FIELD ZETA, More than 1% Error\033[0m\n" << '\n';
+            // computing zeta (n) by zeta(n)=zeta(n-1/2)+ zeta'(n) dtau/2.
+            // cout<< abs((zeta_integer(x)-zeta_check)/(zeta_integer(x))) << '\n';
+            // if (numerator>1) cout<<"The number of steps to converge: "<<numerator<<endl;
+
+          }
+          //Since we have n_kess updates we must put Hcon_old=Hcon;
+          Hcon_old=Hcon;
+        }
+
+\end{lstlisting}
+The result for $\zeta$ is that  after one iteration the next corrected $\zeta_n$  just make $10^{-16}$ difference, but as it is clear the code is intelligent and after converging about $0.01\%$ stop the loop and if it does not stop after some tries we get precision error! \\
+For the $\pi$ since we do not have any inter/extrarpolation we do not need to use predictor corrector method, moreover we cannot do anything about $\Psi$ and $\Phi$ which are updated somewhere else after the kessence loop, if we need better precision for $\Psi$ and $\Phi$ we need to use corrector method in the particles loop to get more precise $\Psi$...\\
+We update the fields in the main file as following ({\color{red} {Not a good way, since fields and particles are not synched for example at first loop. Instead we can use the  reasoning in the paragraph after the code to make it better and synched with particles!}})
+\begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+  		//Kessence
+#ifdef BENCHMARK
+		ref_time = MPI_Wtime();
+#endif
+        for (x.first(); x.test(); x.next())
+    		{
+    			phi_prime(x) =(phi(x)-phi_old(x))/(dtau);
+    		}
+        // We just need to update halo when we want to calculate spatial derivative or use some neibours at the same time! So here wo do not nee to update halo for phi_prime!
+//**********************
+//Kessence - LeapFrog:START
+//**********************
+  double a_kess=a;
+	for (i=0;i<sim.nKe_numsteps;i++)
+	{
+    //First we update zeta to have it at n+1/2
+    if(cycle==0)
+    {
+      for (x.first(); x.test(); x.next())
+      {
+        psi=phi(x) - chi(x);
+;
+        Laplacian_pi= pi_k(x-0) + pi_k(x+0) - 2. * pi_k(x);
+        Laplacian_pi+=pi_k(x+1) + pi_k(x-1) - 2. * pi_k(x);
+        Laplacian_pi+=pi_k(x+2) + pi_k(x-2) - 2. * pi_k(x);
+        Laplacian_pi= Laplacian_pi/(dx*dx);
+        zeta_half(x) =zeta_integer(x) - 0.5 * dtau * ( 3. * Hconf(a_kess, fourpiG, cosmo) * ( cosmo.w_kessence * zeta_integer(x) + cosmo.cs2_kessence * psi ) - cs2 * (3. * Hconf(a_kess, fourpiG, cosmo) * Hconf(a_kess, fourpiG, cosmo) - 3. * Hconf_prime(a_kess, fourpiG, cosmo) ) * pi_k(x)); 
+        //Approximations: 1-The linear definition of derivative
+        //                2-phi_prime = 0
+        //                3- cs^2 Laplace pi =0
+        //Phi_prime is omitted since in the first loop is zero
+        // We also have neglected Laplace term since Laplace itself is small and is multiplied to cs^2 which is very suppressed!
+        //We could naively take \zeta_old_half = zeta_integer but we guess we may make a mistake!
+        // Since int he first loop zeta_half is taken zero to not make a lot of mistake we take it equal to the half next step of it i.e zeta^0 but just for the first loop!
+      }
+    }
+
+    //First we update zeta to have it at n+1/2
+    update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
+    // By assuming that we have zeta^{-1/2} which is equal to \zeta^0 we get zeta^{1/2} by updating it by dtau and using zeta' (0)
+    // In sum: zeta(1/2) = zeta(-1/2)=zeta(0) + zeta'(0) dtau for the first loop
+    //Then we use Corrector method to correct the zeta(0) by using new values ... to make sure that we dont make alot of mistakes.
+    //After this update we have zeta(1/2) and zeta(1)
+    zeta_half.updateHalo();
+    zeta_integer.updateHalo();
+    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0 );
+    //Now we update pi_k
+		update_pi_k(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_prime(a_kess, fourpiG, cosmo)); // H_old is updated here in the function
+		pi_k.updateHalo();
+		rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0);
+	}
+#ifdef BENCHMARK
+    kessence_update_time += MPI_Wtime() - ref_time;
+    ref_time = MPI_Wtime();
+#endif
+//**********************
+//Kessence - LeapFrog: End
+//**********************
+  \end{lstlisting}
+ It is super important to know how update the fields in the first loop to be consistent! \\ of course the last main loop which updates the $\zeta$ for half step in the first loop does not seem to work. Instead we use the following procedure at the first loop. One naive way is just assume that $\zeta^{-1/2} \approx \zeta^{(0)}$ which is more or less true if we start from high enough redshift, but we use corrector method to get the correct $\zeta^{(1/2)}$ ,
+    \be
+  \zeta^{(1/2)} = \zeta^{(-1/2)} + \zeta'^{(0)} d \tau
+  \ee
+  So before starting the loop over the scalar field we update the $\zeta$ to have the value at step $1/2$ and now we can put them into the loop and get all the values which are synched with particles!  ({\color{red} No this is not a good way! })\\ This is the same as just updating $\zeta$ and $\pi$ without caring about first loop {\color{red}No in this case we have taken $\zeta^{(-1/2)}$ to zero! which may not be true!}!! Before we updated $\pi'$ first by half step then we updated $\pi$ in next loops we have updated the $\pi$ so these two fields were not synched with particles! But now instead we just make an assumption which is very well under control by corrector method and instead we get the values of the fields at integer steps synched with particles even at first loop! ({\color{red} No, Corrector method does not work for the linear equations better to estimate the field $\zeta$ at step $-1/2$!}) But it is clear that we might make a mistake at first loop because of the fact that we don't have $\Phi'$...
+ \\
+ At the end we have the following main part, while we can also use the linear prediction for $\zeta^{-1/2}$ from the derivative of $\zeta$ at initial step. After fixing the bugs related to the updating we have,
+ \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+  //**********************
+//Kessence - LeapFrog:START
+//**********************
+  double a_kess=a;
+	for (i=0;i<sim.nKe_numsteps;i++)
+	{
+    //First we update zeta to have it at 0-1/2 just in the first loop
+    if(cycle==0)
+    {
+      for (x.first(); x.test(); x.next())
+      {
+        //computing zeta(-1/2)
+        zeta_half(x) =zeta_integer(x) - 0.5 * dtau * ( 3. * Hconf(a_kess, fourpiG, cosmo) * ( cosmo.w_kessence * zeta_integer(x) + cosmo.cs2_kessence * phi(x) - chi(x) ) - cosmo.cs2_kessence * (3. * Hconf(a_kess, fourpiG, cosmo) * Hconf(a_kess, fourpiG, cosmo) - 3. * Hconf_prime(a_kess, fourpiG, cosmo) ) * pi_k(x));
+        //Approximations: 1-The linear definition of derivative
+        //                2-phi_prime = 0
+        //                3- cs^2 Laplace pi =0
+        //Phi_prime is omitted since in the first loop is zero
+        // We also have neglected Laplace term since Laplace itself is small and is multiplied to cs^2 which is very suppressed!
+        //We could naively take \zeta_old_half = zeta_integer but we guess we may make a mistake!
+        // Since int he first loop zeta_half is taken zero to not make a lot of mistake we take it equal to the half next step of it i.e zeta^0 but just for the first loop!
+      }
+      //Updating zeta to get zeta(1/2) and zeta(0) just in the first loop
+      // In sum: zeta(1/2) = zeta(-1/2)=zeta(0) + zeta'(0) dtau for the first loop
+      update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
+      zeta_half.updateHalo();
+      zeta_integer.updateHalo();
+    }
+
+    //Since we have pi(n+1)=pi(n) + pi'(n+1/2), and in pi'(n+1/2) we have H(n+1/2) we update the background before updating the pi to have H(n+1/2)
+    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0);
+    //First we update pi to have it at n+1 (at first loop from the value at (0) and the value of zeta at 1/2 and H(n+1/2) we update pi at (1))
+    update_pi_k(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_prime(a_kess, fourpiG, cosmo)); // H_old is updated here in the function
+		pi_k.updateHalo();
+    // Now we have pi(n+1) and a_kess(n+1/2) so we update background by halfstep to have a_kess(n+1) to calculate zeta'(n+1) to have zeta(n+1/2)=zeta(n-1/2) + zeta'(n+1) dtau
+    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0 );
+    //Now from the values of zeta at step (1/2) we calculate zeta(3/2) and then we calculate zeta(1) which is synched with pi(1)
+    update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
+    zeta_half.updateHalo();
+    zeta_integer.updateHalo();
+
+	}
+#ifdef BENCHMARK
+    kessence_update_time += MPI_Wtime() - ref_time;
+    ref_time = MPI_Wtime();
+#endif
+//**********************
+//Kessence - LeapFrog: End
+//**********************  \end{lstlisting}
+  One more thing is that we need to use $update.halo$ just when we want to take derivatives or want to know the value of the field in some neighbourhoods at one loop, which means that the cpu's must share their information in the boundaries! \\
+  {\large{\color{Red}Bug Fixed:}} We have done the update of background and the fields specially the fact that in the first loop the $\zeta$ and $\pi$ were not synched. We have fixes the issue by changing the updating as following. Just note that although we have made a mistake in the updating but according to the plots it is clear that the error is not so much!  \\
+ So what we have done for the first loop does not seem correct since at the end of the first loop we get just $\zeta^{(1/2)}$ and by averagin the valus at  $\zeta^{(-1/2)}$ and  $\zeta^{(1/2)}$ we get  $\zeta^{(0)}$ while we need to have them at step 1 which is the case for $\pi$ field which is already updated from step 0 to step 1! \\So what we are going to do is as following,\\
+ 1- First calculate  $\zeta^{(-1/2)}$ from the value at $0$ and the derivative at $0$ which is already done in the previous parts, (just for the first loop)
+ 2- Update $\zeta$ by the updatezeta function which update $\zeta$ to step (1/2) and also by taking the average of $\zeta^{(-1/2)}$ and  $\zeta^{(1/2)}$ recalculate and update the value at step 0  $\zeta^{(0)}$,\\
+ 3- Now we have the values of the $\pi$ and $\zeta$ at step $0$ and $\zeta$ at step $1/2$ so we start the loops for updating the fields,\\
+4- Before the loop started we update the background by half step to have the values of the background at (1/2) since we have $\zeta$ at step (1/2) and also we need the $\pi'$ at (1/2), the $\pi$ is updated from the  $\zeta^{(1/2)}$ and the values at step 0,  $\pi^{(1)}$ is calculated \\
+5-  $\zeta$ is updated from the values of the  $\pi^{(1)}$ and other values at step (1) and finally $\zeta^(1)$ and $\zeta^{(3/2)}$ is calculated!\\
+Its done! so we have the values at the same time as the particles, for example in the first loop we have $\zeta^{(1)}$ and $\pi^{(1)}$ which is synchronized with particles which will be updated after kessence field and the in the beginning of the next loop will be added to the total stress tensor. Moreover in the first loop we have stress tensor from the values at step (0) which is calculated from the initial conditions! Just keep in mind that it is a little bit wring since at initial redshift $\Phi'$ is taken  zero!  \\
+ After fixing the bug we see a magnificent improvement (by 1/10) in the error of the fields, which shows the consistency, for example just fo the small run we have,
+   \begin{figure}[H]
+ \includegraphics[scale=0.3]{Comp_New_01} 
+ \end{figure}
+
+\subsubsection{Results, with corrector method!} ({\color{red} Update: Corrector method does not work for linear equations})
+ It really does not improve the solution! In some cases going through the predictor corrector method improves the solution by relative error of $10^{-16}$ while it is less than writing precision of variables which is about $10^{-6}$ relative error. \\ It seems that corrector loop does not do anything for linear equations (which is more or less expected?) {\color{red} why? and what is a test differenctial equaiton which might improve by predictor method significantly? This is very important for non-linear parts specifically!} \\
+ For linear equation the answer is we do not improve by corrector method! I guess for linear equations only equations with some singularity go through corrector loop!
+ \subsection{$\delta$ comparison}
+ Here to check we are writing the true stress tensor, we compare the Gevolution with mathematica result and we turn on the kessence source gravity flag but keep in mind that since we use new set of variables, the gravitational potentials are not appeared on the stress tensor since we have gravitational potential hidden on the $\zeta$! \\
+So we can easily check Gevolution versus mathematica to just check that the power of Stress tensor is correctly produced, while we already know that it must be correct since we have checked all the variables including like $\pi$, $\zeta$ and $\mathcal{H}$ so it is kind of making sure that the effect of kessence stress tensor on the total stress tensor is taken into account correctly and plus it is written in the output text rightly.\\
+So we are going to do is first turn off the effect of kessence stress tensor on the total stress tensor and check just the kessence stress tensor is written correctly and is compared with the error we expect. In terms of new variables the stress tensor reads,
+\begin{align}
+ & T_0^0 (Gev)=  \Omega^0_{kess} a^{-3 w}  \Bigg[1+ \frac{1+w}{c_s^2} \Big(- 3 \mathcal{H}c_s^2 \pi +\zeta     \Big )   \Bigg ]
+\nonumber \\ &
+T^{i}_{0}(Gev)= - \Omega^0_{kess} a^{-3 w} (1+w) \partial _i \pi 
+\nonumber \\ &
+T_{j}^{i}(Gev)= w  \, \Omega^0_{kess} a^{-3 w} \Bigg [ 1+  \frac{1+w}{w}\Big ( -3 \mathcal{H} w  \pi+ \zeta \Big) \delta_{j}^{i}   \Bigg]
+\end{align}
+So the $\delta_{kess} = \frac{1+w}{c_s^2} \Big(- 3 \mathcal{H}c_s^2 \pi +\zeta     \Big ) $ which now we want to compare between Gevolution and mathematica solution for when this stress tensor does not contribute to the total stress tensor in Gevolution which is what we are able to catch in mathematica!
+ \\
+ The technical part of mathematica script would be,
+  \begin{lstlisting}[language=Mathematica, basicstyle=\tiny]
+  GevPowerDataz100 = 
+  Table[{datapiGev100[[l, 1]], GevFieldz100[[l]], Gevzetaz100[[l]],  GevDeltaz100[[l]]}, {l, 1, Dimensions[GevFieldz100][[1]]}];
+  MatSolz100 = 
+  Table[{GevPowerDataz100[[k, 1]], Abs[Agrex[[k]][[1, 2]][[1]]],  Abs[Agrex[[k]][[1, 3]][[1]]],  Abs[(1 + w)/ cs^2 (-3 cs^2 Agrex[[k]][[1, 2]][[1]] 
+  +  Agrex[[k]][[1, 3]][[1]]  )]}, {k, 1, kmax}]; (*Last column is delta computed*)
+  Error\[Delta]10 = Table[{MatSolz10[[k, 1]],  Abs[(Abs[MatSolz10[[k, 4]]] - GevPowerDataz10[[k, 4]])]/
+     GevPowerDataz10[[k, 4]]}, {k, 1, kmax}] // N;
+  \end{lstlisting}
+       After  tracking the $\delta$ in mathematica and Gevolution we get the result in the below,
+       \begin{figure}[H]
+ \includegraphics[scale=0.3]{delta_sol_01} 
+ \end{figure}
+  Now what happens if we let also the stress tensor of kessence contribute in the total stress energy tensor? That is a important check which shows that the stress tensor is added in Gevolution correctly, since from previous experience we know that if we add it with wrong coefficients the particles speed up and go over cpus!
+  
+  
+ \paragraph{Leap-frog method: Full equation}
+Here we try to compare mathematica with Gevolution in scalar fields solution  when the gravitational potentials are turned on and kessence does not source gravity yet
+ \paragraph{Mathematica vs Gevolution}
+We try to compare stress tensor and fields in Gevolution with Mathematica solution, to just make sure everything is under the control,
 \subsection{Comparing class, mathematica and Gevolution with initial condition from class for mathematica}
+Giving initial condition from Class, comparing Class with Mathematica and Gevolution solution, to just quantify the effect of non-linear $\Psi$ in Gevolution and etc.
 
-  \subsubsection{Comparing stress tensor and field solution from Gevolution with mathematica and class}
-  \paragraph{Comparing the class and Gevolution field and stress tensors at z=0 and z=10}
-  -If there is a tension we need to solve in mathematica and comparing with our solution! \\
-\paragraph{Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density }
--For the limit $c_s^2 \to 0$ check we get matter power from Gevolution compared with class!
-  \paragraph{Comparing with mathematica solution}
-  comparing the stress tensor and field and $\zeta$
-    \paragraph{Comparing with class }
-  comparing the stress tensor and field and $\zeta$
+\subsection{Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density }
+-For the limit $c_s^2 \to 0$ check we get matter power from Gevolution compared with class!\\
+We have checked that we get such a behaviour in class, do we get in Gevolution too?\\
+This is a consistency check but not so much necessary for our purposes!
+\section{Non-linear contrubution}
+Here we write the full equations and try to solve them numerically! \\
+We need to measure the effect of non linear terms on scalar field and etc\\
+If we get wrong result we need to solve the non-linear terms in mathematica and compare with Gevolution directly?!
+\section{Sensitivity to initial conditions}
+What would be error if we set the initial condition at z=100 to zero?
+ \flushbottom
 
+%{\color{red} If we use pureEFT flag in EFTcamb, what are the related parameters for k-essence case?  since the translation between the standard language with EFTcamb is not trivial according to table 1 of   \url{https://arxiv.org/pdf/1411.3712.pdf} }
+%In the beginning we use minimally coupled quintessence flag in the EFTcamb to check the consistency, then we should try the pureEFT flag. We choose the quintessence flag according to \url{http://www.eftcamb.org/images/EFTCAMB_structure.pdf} in the second part.
 
-% \flushbottom
-%
-%%{\color{red} If we use pureEFT flag in EFTcamb, what are the related parameters for k-essence case?  since the translation between the standard language with EFTcamb is not trivial according to table 1 of   \url{https://arxiv.org/pdf/1411.3712.pdf} }
-%%In the beginning we use minimally coupled quintessence flag in the EFTcamb to check the consistency, then we should try the pureEFT flag. We choose the quintessence flag according to \url{http://www.eftcamb.org/images/EFTCAMB_structure.pdf} in the second part.
-%
-%\end{document}
+\end{document}
  

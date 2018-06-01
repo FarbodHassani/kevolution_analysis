@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Initial condition in class and Gevolution}{}% 1
+\BOOKMARK [2][-]{subsubsection.1.0.1}{Mathematica solution from class initial condition and comparing with class}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.0.2}{Mathematica solution from Gevolution initial condition and comparing with Gevolution}{subsubsection.1.0.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.0.3}{Comparing stress tensor and field solution from Gevolution with mathematica and class}{subsubsection.1.0.1}% 4
+\BOOKMARK [2][-]{subsection.1.1}{To check non-linear part of field equation, use Maldacena's relation for long modes or look at some other limits? redTo do! ! }{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.2}{Check the equations in class and Gevolution for cs2 0 and w 0 for new set of variables to get the matter behaviour and cross check with class! redTo do! }{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.3}{To check non-linear part of field equation, use Maldacena's relation for long modes or look at some other limits? }{section.1}% 7
+\BOOKMARK [1][-]{section.2}{The evolution comparisons and tests}{}% 8
+\BOOKMARK [2][-]{subsubsection.2.0.1}{Solving the equation and comparison with mathematica}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Euler method, equations without potentials}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Leap-frog method, equations without potentials \(First loop is tricky!\)}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Results}{subsection.2.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.2}{By corrector methods check the errors on variables \(red Does not work for linear equation\)}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Results, with corrector method!}{subsection.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.3}{ comparison}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.4}{Comparing class, mathematica and Gevolution with initial condition from class for mathematica}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.5}{Checking the limit cs2 0 that we get kessence density as matter density }{section.2}% 17
+\BOOKMARK [1][-]{section.3}{Non-linear contrubution}{}% 18
+\BOOKMARK [1][-]{section.4}{Sensitivity to initial conditions}{}% 19
