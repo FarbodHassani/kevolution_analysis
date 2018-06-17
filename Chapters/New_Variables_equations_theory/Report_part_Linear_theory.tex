@@ -263,7 +263,7 @@ we take $\pi$ and $\zeta$ defined as following  as new set of variables,
 \be
 \zeta \doteq	 -\Psi + \pi' + \mathcal{H} \pi,
 \ee
-After substitution in mathematica we get,
+After substitution in mathematica we get. 
 \begin{figure} [H]
  \includegraphics [scale=0.6]{mathem_270418}
  \end{figure}
@@ -354,12 +354,14 @@ T_{j}^{i}(Gev)= w  \, \Omega^0_{kess} a^{-3 w} \Bigg [ 1+  \frac{1+w}{w}\Big ( -
   \ee
   So for the leapfrog method, it is to us to choose which equation want to update in half steps and which one in integer steps, but since we have most the variables at integer steps, it is better to update $\zeta$ in half steps which acts like  the velocity of the field !
   \simpleparagraph{$\zeta$ equation}
+  
+  {\large{\color{red}Here something is wrong! Its better to update first $\pi$ and then $\zeta$ so we need to compute $\zeta_{n+3/2}$ from $\zeta_{n+1/2}$ not the opposite! So all the terms below we mean calculating $\zeta_{n+3/2}$... }}
   \be
   \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} + \zeta'_{n} \Delta \tau
   \ee
   where $ \zeta'_{n}$ reads from the differential equation as following,
   \be
-  \zeta'_{n}=3 \mathcal{H}_{n}(w \zeta_{n} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
+  \zeta'_{n}=3 \mathcal{H}_{n}(w \zeta_{n} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n}l
   - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n}
     \ee
     Since we need to have $\zeta_n$ at $\zeta'_n$ so we write $\zeta_{n} = \frac{\zeta_{n+1} + \zeta_{n} }{2}$ \\

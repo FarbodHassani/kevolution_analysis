@@ -1,245 +1,273 @@
-%\documentclass[a4paper,12pt]{article}
-%%% My standard included packages
-%%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
-%%             % images in pdf, png or jpg format)
-%%\usepackage{jcappub} % for details on the use of the package, please
-%%                     % see the JCAP-author-manual
-%%\usepackage[T1]{fontenc} % if needed
-%
-%\usepackage{setspace}           % Allows easy changes to line spacing 
-%\usepackage{graphicx}           % Allows including of graphics files
-%\usepackage{amsmath}            % Additional math capabilities
-%\usepackage{marginnote}         % Used with todonotes package
-%\usepackage{datetime}           % Allows formatting of date and time
-%\newcommand {\be}{\begin{equation}}
-%\newcommand {\ee}{\end{equation}}
-%
-%\usepackage{empheq}
-%\usepackage{cancel}
-%\usepackage{etoolbox}
-%
-%
-%\usepackage{enumitem} 
-%\usepackage{color}
-%%Mathematica colors
-%\definecolor{identifiercolor}{rgb}{.4,.6,.56}
-%\definecolor{stringcolor}{gray}{0.5}
-%\definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
-%\usepackage{listings}
-%%Mathematica
-%\usepackage{listings}
-%\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
-%  breaklines=true,
-%  escapeinside={\%*}{*)},
-%  keywordstyle={\bfseries\color{inactivecolor}},
-%  stringstyle={\bfseries\color{stringcolor}},
-%  identifierstyle={\bfseries\color{identifiercolor}},
-%  language=Mathematica,
-%  otherkeywords={DiscretizeRegion},
-%  showstringspaces=false}
-%\renewcommand{\lstlistingname}{Listing}
-%
-%
-%
-%
-%\usepackage{amsmath}
-%\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
-%\usepackage{caption}
-%\usepackage{subcaption}
-%          % List formatting commands
-%\setlist{noitemsep}             % Remove space between list items 
-%%\usepackage{subfigure}          % Create numbered and captioned subfigures
-%\usepackage{rotating}           % Create landscape tables and figures
-%\usepackage[dvipsnames]{xcolor} % Refer to colors by name
-%\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
-%%\usepackage{hyperref}           % URLS and hyperlinks
-%\usepackage{float}              % Activate [H] option to place figure HERE
-%\usepackage[numbers]{natbib}
-%\usepackage{versionPO}          % Include text conditionally
-%\usepackage{caption}
-%%\usepackage[utf8]{inputenc}
-%%\usepackage[nottoc]{tocbibind}
-%\lstset{basicstyle=\ttfamily,
-%  showstringspaces=false,
-%  commentstyle=\color{red},
-%  keywordstyle=\color{blue}
+\documentclass[a4paper,12pt]{article}
+%% My standard included packages
+%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+%             % images in pdf, png or jpg format)
+%\usepackage{jcappub} % for details on the use of the package, please
+%                     % see the JCAP-author-manual
+%\usepackage[T1]{fontenc} % if needed
+
+\usepackage{setspace}           % Allows easy changes to line spacing 
+\usepackage{graphicx}           % Allows including of graphics files
+\usepackage{amsmath}            % Additional math capabilities
+\usepackage{marginnote}         % Used with todonotes package
+\usepackage{datetime}           % Allows formatting of date and time
+\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+
+\usepackage{empheq}
+\usepackage{cancel}
+\usepackage{etoolbox}
+
+
+\usepackage{enumitem} 
+\usepackage{color}
+%Mathematica colors
+\definecolor{identifiercolor}{rgb}{.4,.6,.56}
+\definecolor{stringcolor}{gray}{0.5}
+\definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
+\usepackage{listings}
+%Mathematica
+\usepackage{listings}
+\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
+  breaklines=true,
+  escapeinside={\%*}{*)},
+  keywordstyle={\bfseries\color{inactivecolor}},
+  stringstyle={\bfseries\color{stringcolor}},
+  identifierstyle={\bfseries\color{identifiercolor}},
+  language=Mathematica,
+  otherkeywords={DiscretizeRegion},
+  showstringspaces=false}
+\renewcommand{\lstlistingname}{Listing}
+
+
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
+\usepackage{caption}
+\usepackage{subcaption}
+          % List formatting commands
+\setlist{noitemsep}             % Remove space between list items 
+%\usepackage{subfigure}          % Create numbered and captioned subfigures
+\usepackage{rotating}           % Create landscape tables and figures
+\usepackage[dvipsnames]{xcolor} % Refer to colors by name
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
+%\usepackage{hyperref}           % URLS and hyperlinks
+\usepackage{float}              % Activate [H] option to place figure HERE
+\usepackage[numbers]{natbib}
+\usepackage{versionPO}          % Include text conditionally
+\usepackage{caption}
+%\usepackage[utf8]{inputenc}
+%\usepackage[nottoc]{tocbibind}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+% These next lines allow including or excluding different versions of text
+% using versionPO.sty
+\includeversion{notes}		% Include notes?
+%\excludeversion{notes}
+\excludeversion{comment}
+\includeversion{links}          % Turn hyperlinks on?
+\excludeversion{submit}		% Format for conference submission?
+\includeversion{toc}		% Include table of contents?
+%\graphicspath{{./Results1-Perihelionadvance}}
+
+% Turn off hyperlinking if links is excluded
+\iflinks{}{\hypersetup{draft=true}}
+
+% Notes options
+\ifnotes{%
+\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
+\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
+}{%
+\usepackage[margin=1in]{geometry}%
+\usepackage[disable]{todonotes}%
+}
+
+% Allow todonotes inside footnotes without blowing up LaTeX
+% Next command works but now notes can overlap. Instead, we'll define 
+% a special footnote note command that performs this redefinition.
+%\renewcommand{\marginpar}{\marginnote}%
+
+% Save original definition of \marginpar
+\let\oldmarginpar\marginpar
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
+% Packages included specifically for this document.
+\usepackage{texintro}           % Document-specific definitions
+\usepackage{tocvsec2}           % More flexible formatting of table of contents
+\usepackage{bibentry}           % Print full citation in text
+\nobibliography*                                % Allow use of \bibentry command
+\usepackage{tikz}             % Already included by todonotes
+\usetikzlibrary{matrix}
+\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
+                                           % allow enumitem to work.
+
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+% If you're including tocvsec2, do so before this command.
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
+
+% Number paragraphs and subparagraphs and include them in TOC
+%\setcounter{tocdepth}{2}
+
+\usepackage[affil-it]{authblk} 
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\bean{\begin{eqnarray*}}
+\def\eean{\end{eqnarray*}}
+\def\cd{\cdot}
+\def\vp{\varphi}
+\def\l {\langle}
+\def\re {\rangle}
+\def \dd {\partial}
+\def \ra {\rightarrow}
+\def \la {\lambda}
+\def \La {\Lambda}
+\def \De {\Delta}
+\def \DH {\Delta_{\rm HI}}
+\newcommand{\de}{\delta}
+\def \b {\beta}
+\def \al {\alpha}
+\def \ka {\kappa}
+\def \Ga {\Gamma}
+\def \ga {\gamma}
+\def \si {\sigma}
+\def \Si {\Sigma}
+\def \ep {\epsilon}
+\def \om {\omega}
+\def \Om {\Omega}
+\def \lap {\triangle}
+\def \ep {\epsilon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Special definitions for this paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\MyRed}{\color [rgb]{0.8,0,0}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
+\newcommand{\MyBrown}{\color [rgb]{0.8,0.4,0.1}}
+\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.6}}
+\def\GV#1{{\MyRed [GV: #1]}}
+\def\RD#1{{\MyGreen [RD:  {\tt #1}]}} 
+\def\RDt#1{{\MyGreen #1}}   
+\def\GM#1{{\MyBlue [GM: #1]}}  
+\def\GF#1{{\MyPurple [GF: #1]}}    
+
+
+
+\newcommand{\ie}{\emph{i. e.}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\eg}{\emph{e. g.}}
+
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\HH}{\mathcal H}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\newcommand{\bell}{\boldsymbol{\ell}}
+\newcommand{\bal}{\boldsymbol{\alpha}}
+
+
+
+
+
+%\usepackage{lmodern}
+%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
+\definecolor{astral}{RGB}{46,116,181}
+%\subsectionfont{\color{astral}}
+%\sectionfont{\color{astral}}
+%\usdate{17 May}                         % Use usual LaTeX date layout
+
+%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
+\title{\color{BlueViolet}\Huge{Just part of projects which should be added to the original version}}
+%\vskip 2em
+\author{Farbod Hassani}
+%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
+%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+
+%{farbod-hassani.com}} }
+%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
+%\title{\TitleFont Halo finder}
+%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
 %}
-%% These next lines allow including or excluding different versions of text
-%% using versionPO.sty
-%\includeversion{notes}		% Include notes?
-%%\excludeversion{notes}
-%\excludeversion{comment}
-%\includeversion{links}          % Turn hyperlinks on?
-%\excludeversion{submit}		% Format for conference submission?
-%\includeversion{toc}		% Include table of contents?
-%%\graphicspath{{./Results1-Perihelionadvance}}
-%
-%% Turn off hyperlinking if links is excluded
-%\iflinks{}{\hypersetup{draft=true}}
-%
-%% Notes options
-%\ifnotes{%
-%\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
-%\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
-%}{%
-%\usepackage[margin=1in]{geometry}%
-%\usepackage[disable]{todonotes}%
+%\thanks{farbod-hassani.com}}
+%\author[2]{Author E\thanks{E.E@university.edu}}
+%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+%\emailAdd{farbod.hassani@gmail.com}
+%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
+      %\begin{abstract}
+%This is abstract text: This simple document shows very basic features of \LaTeX{}.
+%\lstset { %
+%    language=C++,
+%    %backgroundcolor=\color{black!5}, % set backgroundcolor
+%    basicstyle=\footnotesize,% basic font settings
 %}
-%
-%% Allow todonotes inside footnotes without blowing up LaTeX
-%% Next command works but now notes can overlap. Instead, we'll define 
-%% a special footnote note command that performs this redefinition.
-%%\renewcommand{\marginpar}{\marginnote}%
-%
-%% Save original definition of \marginpar
-%\let\oldmarginpar\marginpar
-%% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
-%\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
-%% Packages included specifically for this document.
-%\usepackage{texintro}           % Document-specific definitions
-%\usepackage{tocvsec2}           % More flexible formatting of table of contents
-%\usepackage{bibentry}           % Print full citation in text
-%\nobibliography*                                % Allow use of \bibentry command
-%\usepackage{tikz}             % Already included by todonotes
-%\usetikzlibrary{matrix}
-%\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
-%                                           % allow enumitem to work.
-%
-%% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
-%% If you're including tocvsec2, do so before this command.
-%\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
-%
-%% Number paragraphs and subparagraphs and include them in TOC
-%%\setcounter{tocdepth}{2}
-%
-%\usepackage[affil-it]{authblk} 
-%\usepackage{etoolbox}
-%\usepackage{titlesec}
-%
-%\setcounter{secnumdepth}{4}
-%
-%\titleformat{\paragraph}
-%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-%\titlespacing*{\paragraph}
-%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-%
-%
-%\def\be{\begin{equation}}
-%\def\ee{\end{equation}}
-%\def\bea{\begin{eqnarray}}
-%\def\eea{\end{eqnarray}}
-%\def\bean{\begin{eqnarray*}}
-%\def\eean{\end{eqnarray*}}
-%\def\cd{\cdot}
-%\def\vp{\varphi}
-%\def\l {\langle}
-%\def\re {\rangle}
-%\def \dd {\partial}
-%\def \ra {\rightarrow}
-%\def \la {\lambda}
-%\def \La {\Lambda}
-%\def \De {\Delta}
-%\def \DH {\Delta_{\rm HI}}
-%\newcommand{\de}{\delta}
-%\def \b {\beta}
-%\def \al {\alpha}
-%\def \ka {\kappa}
-%\def \Ga {\Gamma}
-%\def \ga {\gamma}
-%\def \si {\sigma}
-%\def \Si {\Sigma}
-%\def \ep {\epsilon}
-%\def \om {\omega}
-%\def \Om {\Omega}
-%\def \lap {\triangle}
-%\def \ep {\epsilon}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%Special definitions for this paper
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\newcommand{\MyRed}{\color [rgb]{0.8,0,0}}
-%\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
-%\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
-%\newcommand{\MyBrown}{\color [rgb]{0.8,0.4,0.1}}
-%\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.6}}
-%\def\GV#1{{\MyRed [GV: #1]}}
-%\def\RD#1{{\MyGreen [RD:  {\tt #1}]}} 
-%\def\RDt#1{{\MyGreen #1}}   
-%\def\GM#1{{\MyBlue [GM: #1]}}  
-%\def\GF#1{{\MyPurple [GF: #1]}}    
-%
-%
-%
-%\newcommand{\ie}{\emph{i. e.}}
-%\newcommand{\cf}{\emph{cf.}}
-%\newcommand{\etal}{\emph{et al.}\xspace}
-%\newcommand{\eg}{\emph{e. g.}}
-%
-%\newcommand{\Scal}{\mathcal S}
-%\newcommand{\DD}{\mathcal D}
-%\newcommand{\EE}{\mathcal E}
-%\newcommand{\MM}{\mathcal M}
-%\newcommand{\HH}{\mathcal H}
-%
-%\newcommand{\Real}{\mathbb{R}}
-%\newcommand{\bn}{\boldsymbol{n}}
-%\newcommand{\bv}{\boldsymbol{v}}
-%\newcommand{\bx}{\boldsymbol{x}}
-%\newcommand{\bnabla}{\boldsymbol{\nabla}}
-%\newcommand{\bell}{\boldsymbol{\ell}}
-%\newcommand{\bal}{\boldsymbol{\alpha}}
-%
-%
-%
-%
-%
-%%\usepackage{lmodern}
-%%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
-%%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
-%%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
-%%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
-%\definecolor{astral}{RGB}{46,116,181}
-%%\subsectionfont{\color{astral}}
-%%\sectionfont{\color{astral}}
-%%\usdate{17 May}                         % Use usual LaTeX date layout
-%
-%%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
-%\title{\color{BlueViolet}\Huge{Just part of projects which should be added to the original version}}
-%%\vskip 2em
-%\author{Farbod Hassani}
-%%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
-%%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
-%%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
-%
-%%{farbod-hassani.com}} }
-%%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
-%%\title{\TitleFont Halo finder}
-%%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
-%%}
-%%\thanks{farbod-hassani.com}}
-%%\author[2]{Author E\thanks{E.E@university.edu}}
-%%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
-%%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
-%%\emailAdd{farbod.hassani@gmail.com}
-%%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
-%      %\begin{abstract}
-%%This is abstract text: This simple document shows very basic features of \LaTeX{}.
-%%\lstset { %
-%%    language=C++,
-%%    %backgroundcolor=\color{black!5}, % set backgroundcolor
-%%    basicstyle=\footnotesize,% basic font settings
-%%}
-%\begin{document}
+\begin{document}
+\section{Turning off the potentials and compare the linear and non-linear equations versus mathematica and quantify the error}
+\section{Convergence tests, to see if by increasing precision in the Gevolution we get better results with respect to linear, which is a test of method too}
+ \section{Linear Gevolution comparisons with class results}
+ The plots are :  Linear $\delta$ and $\theta$ of kessence and $\delta$ of matter in Gevolution and class,\\
+ Two fields in class and linear  Gevolution $\zeta$ and $\pi$,\\
+
+ \section{Linear and non-linear comparisons with class results}
+  The plots are : non-linear $\delta$ and $\theta$ of kessence and $\delta$ of matter in Gevolution and class,\\
+ Two fields in class and non-linear  Gevolution $\zeta$ and $\pi$,\\
+Here we want to compare non-linear results versus class for different variables, $\zeta$, $\pi$ and $\delta_{kess}$ to see what is the effect of non-linearities and does it make sense at all?\\
+We use the true initial condition for Gevolution which $\zeta$ values are not necessarily positive. \\
+{\color{red} It seems that something is going wrong.}\\
+Not just because of the relative error which is not a good measure, instead we must take average or...\\
+Specially because of the comparison with linear results as following, which shows that there is running for $\zeta_{kess}$ which after looking at the fields behaviour we see the following plot which makes very clear why the particles blow up at low redshifts and we get $\zeta=NAN$. The reason is that either the implementation is wrong or the equation has an instability. So we need to decrease time steps or some convergence tests to see if we can solve the issue.
+      \begin{figure} [H]
+ \includegraphics [scale=0.6]{NL-LIN_wrong}
+ \end{figure}
+       \begin{figure} [H]
+ \includegraphics [scale=0.6]{fields-wrong_001}
+ \end{figure}
+ But before trying to solve the non-linear issue, lets look at the integer we have recently added which switches between linear and non-linear and see if we can recover linear spectra with turning on just linear part.
+  \section{Sensitivity to initial conditions}
+What would be error if we set the initial condition at z=100 to zero?
+ \section{The effect of non linearities on gravitational potential at some different redshifts $\Psi$ and matter power spectrum}
+ \section{Solve the solution to non-linear terms in mathematica with Gevolution}
+ Just if we get bad results, try to solve the terms separately...
+ \section{Measuring the average of field in Gevolution to see the backreacktion}
 
 \section{Sensitivity to initial conditions}
 What would be error if we set the initial condition at z=100 to zero?
  \flushbottom
  \section{The effect of non linearities on gravitational potential at some different redshifts $\Psi$ and matter power spectrum}
 \section{Trace the average of the perturbation to be consistent}
+Lorenzo function
 \section{Vector elliptic and vector parabolic consistency check}
-\section{Comparing fields and density of kessence in Gevolution versus class}
+Turn on the other equations, vector parabolic and see if we get the same results
 %{\color{red} If we use pureEFT flag in EFTcamb, what are the related parameters for k-essence case?  since the translation between the standard language with EFTcamb is not trivial according to table 1 of   \url{https://arxiv.org/pdf/1411.3712.pdf} }
 %In the beginning we use minimally coupled quintessence flag in the EFTcamb to check the consistency, then we should try the pureEFT flag. We choose the quintessence flag according to \url{http://www.eftcamb.org/images/EFTCAMB_structure.pdf} in the second part.
- 
+ \end{document}

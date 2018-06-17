@@ -1,5 +1,12 @@
-\BOOKMARK [1][-]{section.1}{Sensitivity to initial conditions}{}% 1
-\BOOKMARK [1][-]{section.2}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 2
-\BOOKMARK [1][-]{section.3}{Trace the average of the perturbation to be consistent}{}% 3
-\BOOKMARK [1][-]{section.4}{Vector elliptic and vector parabolic consistency check}{}% 4
-\BOOKMARK [1][-]{section.5}{Comparing fields and density of kessence in Gevolution versus class}{}% 5
+\BOOKMARK [1][-]{section.1}{Turning off the potentials and compare the linear and non-linear equations versus mathematica and quantify the error}{}% 1
+\BOOKMARK [1][-]{section.2}{Convergence tests, to see if by increasing precision in the Gevolution we get better results with respect to linear, which is a test of method too}{}% 2
+\BOOKMARK [1][-]{section.3}{Linear Gevolution comparisons with class results}{}% 3
+\BOOKMARK [1][-]{section.4}{Linear and non-linear comparisons with class results}{}% 4
+\BOOKMARK [1][-]{section.5}{Sensitivity to initial conditions}{}% 5
+\BOOKMARK [1][-]{section.6}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 6
+\BOOKMARK [1][-]{section.7}{Solve the solution to non-linear terms in mathematica with Gevolution}{}% 7
+\BOOKMARK [1][-]{section.8}{Measuring the average of field in Gevolution to see the backreacktion}{}% 8
+\BOOKMARK [1][-]{section.9}{Sensitivity to initial conditions}{}% 9
+\BOOKMARK [1][-]{section.10}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 10
+\BOOKMARK [1][-]{section.11}{Trace the average of the perturbation to be consistent}{}% 11
+\BOOKMARK [1][-]{section.12}{Vector elliptic and vector parabolic consistency check}{}% 12

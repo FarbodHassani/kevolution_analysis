@@ -1,0 +1,1165 @@
+\documentclass[a4paper,12pt]{article}
+%% My standard included packages
+%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+%             % images in pdf, png or jpg format)
+%\usepackage{jcappub} % for details on the use of the package, please
+%                     % see the JCAP-author-manual
+%\usepackage[T1]{fontenc} % if needed
+
+\usepackage{setspace}           % Allows easy changes to line spacing 
+\usepackage{graphicx}           % Allows including of graphics files
+\usepackage{amsmath}            % Additional math capabilities
+\usepackage{marginnote}         % Used with todonotes package
+\usepackage{datetime}           % Allows formatting of date and time
+\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+
+\usepackage{empheq}
+\usepackage{cancel}
+\usepackage{etoolbox}
+
+
+\usepackage{enumitem} 
+\usepackage{color}
+%Mathematica colors
+\definecolor{identifiercolor}{rgb}{.4,.6,.56}
+\definecolor{stringcolor}{gray}{0.5}
+\definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
+\usepackage{listings}
+%Mathematica
+\usepackage{listings}
+\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
+  breaklines=true,
+  escapeinside={\%*}{*)},
+  keywordstyle={\bfseries\color{inactivecolor}},
+  stringstyle={\bfseries\color{stringcolor}},
+  identifierstyle={\bfseries\color{identifiercolor}},
+  language=Mathematica,
+  otherkeywords={DiscretizeRegion},
+  showstringspaces=false}
+\renewcommand{\lstlistingname}{Listing}
+
+
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
+\usepackage{caption}
+\usepackage{subcaption}
+          % List formatting commands
+\setlist{noitemsep}             % Remove space between list items 
+%\usepackage{subfigure}          % Create numbered and captioned subfigures
+\usepackage{rotating}           % Create landscape tables and figures
+\usepackage[dvipsnames]{xcolor} % Refer to colors by name
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
+%\usepackage{hyperref}           % URLS and hyperlinks
+\usepackage{float}              % Activate [H] option to place figure HERE
+\usepackage[numbers]{natbib}
+\usepackage{versionPO}          % Include text conditionally
+\usepackage{caption}
+%\usepackage[utf8]{inputenc}
+%\usepackage[nottoc]{tocbibind}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+% These next lines allow including or excluding different versions of text
+% using versionPO.sty
+\includeversion{notes}		% Include notes?
+%\excludeversion{notes}
+\excludeversion{comment}
+\includeversion{links}          % Turn hyperlinks on?
+\excludeversion{submit}		% Format for conference submission?
+\includeversion{toc}		% Include table of contents?
+%\graphicspath{{./Results1-Perihelionadvance}}
+
+% Turn off hyperlinking if links is excluded
+\iflinks{}{\hypersetup{draft=true}}
+
+% Notes options
+\ifnotes{%
+\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
+\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
+}{%
+\usepackage[margin=1in]{geometry}%
+\usepackage[disable]{todonotes}%
+}
+
+% Allow todonotes inside footnotes without blowing up LaTeX
+% Next command works but now notes can overlap. Instead, we'll define 
+% a special footnote note command that performs this redefinition.
+%\renewcommand{\marginpar}{\marginnote}%
+
+% Save original definition of \marginpar
+\let\oldmarginpar\marginpar
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
+% Packages included specifically for this document.
+\usepackage{texintro}           % Document-specific definitions
+\usepackage{tocvsec2}           % More flexible formatting of table of contents
+\usepackage{bibentry}           % Print full citation in text
+\nobibliography*                                % Allow use of \bibentry command
+\usepackage{tikz}             % Already included by todonotes
+\usetikzlibrary{matrix}
+\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
+                                           % allow enumitem to work.
+
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+% If you're including tocvsec2, do so before this command.
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
+
+% Number paragraphs and subparagraphs and include them in TOC
+%\setcounter{tocdepth}{2}
+
+\usepackage[affil-it]{authblk} 
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\bean{\begin{eqnarray*}}
+\def\eean{\end{eqnarray*}}
+\def\cd{\cdot}
+\def\vp{\varphi}
+\def\l {\langle}
+\def\re {\rangle}
+\def \dd {\partial}
+\def \ra {\rightarrow}
+\def \la {\lambda}
+\def \La {\Lambda}
+\def \De {\Delta}
+\def \DH {\Delta_{\rm HI}}
+\newcommand{\de}{\delta}
+\def \b {\beta}
+\def \al {\alpha}
+\def \ka {\kappa}
+\def \Ga {\Gamma}
+\def \ga {\gamma}
+\def \si {\sigma}
+\def \Si {\Sigma}
+\def \ep {\epsilon}
+\def \om {\omega}
+\def \Om {\Omega}
+\def \lap {\triangle}
+\def \ep {\epsilon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Special definitions for this paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\MyRed}{\color [rgb]{0.8,0,0}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
+\newcommand{\MyBrown}{\color [rgb]{0.8,0.4,0.1}}
+\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.6}}
+\def\GV#1{{\MyRed [GV: #1]}}
+\def\RD#1{{\MyGreen [RD:  {\tt #1}]}} 
+\def\RDt#1{{\MyGreen #1}}   
+\def\GM#1{{\MyBlue [GM: #1]}}  
+\def\GF#1{{\MyPurple [GF: #1]}}    
+
+
+
+\newcommand{\ie}{\emph{i. e.}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\eg}{\emph{e. g.}}
+
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\HH}{\mathcal H}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\newcommand{\bell}{\boldsymbol{\ell}}
+\newcommand{\bal}{\boldsymbol{\alpha}}
+
+
+
+
+
+%\usepackage{lmodern}
+%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
+\definecolor{astral}{RGB}{46,116,181}
+%\subsectionfont{\color{astral}}
+%\sectionfont{\color{astral}}
+%\usdate{17 May}                         % Use usual LaTeX date layout
+
+%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
+\title{\color{BlueViolet}\Huge{Just part of projects which should be added to the original version}}
+%\vskip 2em
+\author{Farbod Hassani}
+%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
+%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+
+%{farbod-hassani.com}} }
+%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
+%\title{\TitleFont Halo finder}
+%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
+%}
+%\thanks{farbod-hassani.com}}
+%\author[2]{Author E\thanks{E.E@university.edu}}
+%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+%\emailAdd{farbod.hassani@gmail.com}
+%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
+      %\begin{abstract}
+%This is abstract text: This simple document shows very basic features of \LaTeX{}.
+%\lstset { %
+%    language=C++,
+%    %backgroundcolor=\color{black!5}, % set backgroundcolor
+%    basicstyle=\footnotesize,% basic font settings
+%}
+\begin{document}
+
+\section{Non-linear contrubution (Bad way to do it)}
+{Martin: We can look at k =10 \\
+Just note that, if we dont run the GEvolution from enough large scale, we lose the the long mode modulation and the pertubration on quadratic variables would change like $\chi$ ..,
+and on the other hand also we have the large power from non linearities of scalar field  }
+Here we write the full equations and try to solve them numerically in Gevolution, and if we got something intreesting or strange we need to solve them in mathematica to see if we did not have make a mistake ! \\ 
+
+To solve in mathematica we must solve with Non -linear solve command and to exactly compare with Gevolution we can get some symmetric situations. The discussion with Julian is as following,
+          \begin{figure}[H]
+ \includegraphics[scale=0.5]{Julina_NL_001} 
+ \end{figure}
+           \begin{figure}[H]
+ \includegraphics[scale=0.5]{Julian_NL_002} 
+ \end{figure}
+     \begin{align} 
+ &{ \pi''+\mathcal{H}(1- 3w) \pi' } +3 {  \mathcal{H}}\Big( -c_s^2+ {w} \Big )\Psi - \, {\Psi'}- 3 c_s^2  \,{\Phi'} + {
+ \Big( 3\mathcal{H}^2 (c_s^2 -w) + \mathcal{H}' (1-3c_s^2)\Big) \pi }
+           \nonumber
+   \\
+    &
+ - c_s^2 {\nabla^2 \pi }
+    % Second order terms
+     -2 c_s^2  \Phi  {\nabla^2 \pi }  
+  %//////////////// 
+  +   (1-c_s^2)  \Psi {\nabla^2 \pi}
+  %////////////////
+  +3 c_s^2 \mathcal{H} (1+w)\pi {\nabla^2 \pi }
+      %////////////////
+        -   (1-c_s^2)  { (\mathcal{H} \pi+ \pi') } \nabla^2 {\pi }
+                                       \nonumber
+   \\
+    &
+        %//////////////// 
+             +c_s^2 {\nabla  \Phi . \nabla \pi}
+   %//////////////// 
+        -(2 c_s^2-1) {\nabla  \Psi . \nabla \pi }  
+   %//////////////// 
+ +\frac{\mathcal{H}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi . \nabla \pi} 
+    %//////////////// 
+     -2   (1-c_s^2){\nabla  \pi . {  \nabla {  (\mathcal{H} \pi+ \pi')   }}}     =0
+  \end{align} 
+\begin{align}
+ & T_0^0 (Gev)=  \Omega^0_{kess} a^{-3 w}  \Bigg[1+ \frac{1+w}{c_s^2} \Bigg(- 3 \mathcal{H}c_s^2 \pi- \Psi+   {({\pi'}+ \mathcal{H} \pi) }  -  (1-2 c_s^2 ) 
+ \frac{(\vec{\nabla} \pi)^2}{2} \Bigg )      \Bigg ]
+\nonumber \\ &
+T^{i}_{0}(Gev)= - \Omega^0_{kess} a^{-3 w} (1+w)  \Big[1 - (\frac{1}{c_s^2} -1)  \frac{(\vec{\nabla} \pi)^2}{2}  \Big ] \partial _i \pi 
+\nonumber \\ &
+T_{j}^{i}(Gev)= w  \, \Omega^0_{kess} a^{-3 w} \Bigg ( 1+  \frac{1+w}{w}\Big [ -3 \mathcal{H} w \pi- \Psi +   {({\pi'}+ \mathcal{H} \pi) }  -  \frac{(\vec{\nabla} \pi)^2}{2}   \Big] \delta_{j}^{i}  + \frac{1+w}{w} \delta^{i k} \partial_k \pi \partial_j \pi  \Bigg) 
+\end{align}
+we take $\pi$ and $\zeta$ defined as following  as new set of variables,
+\be
+\zeta \doteq	 -\Psi + \pi' + \mathcal{H} \pi,
+\ee
+After substitution $\pi' \to \zeta + \Psi - \mathcal{H} \pi$ we get the following expression for stress tensor according to mathematica, which is very clear,
+\begin{figure} [H]
+ \includegraphics [scale=0.6]{mathematica_stress_001}
+ \end{figure}
+ So the stress tensor reads,
+\begin{align}
+ & T_0^0 (Gev)=  \Omega^0_{kess} a^{-3 w}  \Bigg[1+ \frac{1+w}{c_s^2} \Bigg(\zeta - 3 \mathcal{H}c_s^2 \pi -  (1-2 c_s^2 ) 
+ \frac{(\vec{\nabla} \pi)^2}{2} \Bigg )      \Bigg ]
+\nonumber \\ &
+T^{i}_{0}(Gev)= - \Omega^0_{kess} a^{-3 w} (1+w)  \Big[1 - (\frac{1}{c_s^2} -1)  \frac{(\vec{\nabla} \pi)^2}{2}  \Big ] \partial _i \pi 
+\nonumber \\ &
+T_{j}^{i}(Gev)= w  \, \Omega^0_{kess} a^{-3 w} \Bigg ( 1+  \frac{1+w}{w}\Big [ -3 \mathcal{H} w \pi +\zeta -  \frac{(\vec{\nabla} \pi)^2}{2}   \Big] \delta_{j}^{i}  + \frac{1+w}{w} \delta^{i k} \partial_k \pi \partial_j \pi  \Bigg) 
+\end{align}
+
+After substitution in mathematica we get,
+  \begin{align} 
+ &{ \zeta' - (\mathcal{H} \pi)' +\Psi'+\mathcal{H}(1- 3w) ( \zeta- \mathcal{H} \pi+\Psi) } +3 {  \mathcal{H}}\Big( -c_s^2+ {w} \Big )\Psi - \, {\Psi'}- 3 c_s^2  \,{\Phi'} + {
+ \Big( 3\mathcal{H}^2 (c_s^2 -w) + \mathcal{H}' (1-3c_s^2)\Big) \pi }
+           \nonumber
+   \\
+    &
+ - c_s^2 {\nabla^2 \pi }
+    % Second order terms
+     -2 c_s^2  \Phi  {\nabla^2 \pi }  
+  %//////////////// 
+  +   (1-c_s^2)  \Psi {\nabla^2 \pi}
+  %////////////////
+  +3 c_s^2 \mathcal{H} (1+w)\pi {\nabla^2 \pi }
+      %////////////////
+        -   (1-c_s^2)  { (\zeta + \Psi) } \nabla^2 {\pi }
+                                       \nonumber
+   \\
+    &
+        %//////////////// 
+             +c_s^2 {\nabla  \Phi . \nabla \pi}
+   %//////////////// 
+        -(2 c_s^2-1) {\nabla  \Psi . \nabla \pi }  
+   %//////////////// 
+ +\frac{\mathcal{H}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi . \nabla \pi} 
+    %//////////////// 
+     -2   (1-c_s^2){\nabla  \pi . {  \nabla {  (\zeta + \Psi)   }}}     =0
+    % Second order terms==0
+  \end{align}
+  The linear part simplification gives the same equation we had before and we can rewrite the  equation as following,
+    \begin{align} 
+ & \zeta' -3w \mathcal{H} \zeta + 3 c_s^2 \Big(  \mathcal{H}^2- \mathcal{H}' \Big) \pi   - 3 c_s^2 \Big ( \,{\Phi'}  +\mathcal{H} \Psi \Big)- c_s^2 {\nabla^2 \pi }
+           \nonumber
+   \\
+    &
+    % Second order terms
+     -2 c_s^2  \Phi  {\nabla^2 \pi }  
+  %//////////////// 
+  +   (1-c_s^2)  \Psi {\nabla^2 \pi}
+  %////////////////
+  +3 c_s^2 \mathcal{H} (1+w)\pi {\nabla^2 \pi }
+      %////////////////
+        -   (1-c_s^2)  { (\zeta + \Psi) } \nabla^2 {\pi }
+                                       \nonumber
+   \\
+    &
+        %//////////////// 
+             +c_s^2 {\nabla  \Phi . \nabla \pi}
+   %//////////////// 
+        -(2 c_s^2-1) {\nabla  \Psi . \nabla \pi }  
+   %//////////////// 
+ +\frac{\mathcal{H}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi . \nabla \pi} 
+    %//////////////// 
+     -2   (1-c_s^2){\nabla  \pi . {  \nabla {  (\zeta + \Psi)   }}}     =0
+    % Second order terms==0
+  \end{align}
+  The other equation is like before,
+  \be
+  \pi' = \zeta + \Psi - \mathcal{H} \pi
+  \ee
+  We actually did nothing except substituting the $\pi'$ and in non-linear part the substitution is very straightforward. Just note that in Gevolution to compute ${\nabla  \pi . {  \nabla {  (\zeta + \Psi)   }}}$  we use the symmetric derivative as follwoing,
+  \be
+  {\nabla  \pi . {  \nabla {  (\zeta + \Psi)   }}} = \frac{1}{4dx^2}\sum_i  \Big[{\pi(x_i+1) -\pi(x_i-1) } \Big]  \Big[ \big(\zeta(x_i+1) + \Psi (x_i+1) \big) -\big(\zeta(x_i-1) + \Psi (x_i-1) \big)  \Big]
+  \ee
+  where "1/4" coefficient appear since we are using symmetric derivative and using points with distance two. "$x_i$" is the lattice coordinate.
+  \subsection{Solving the equation by leap-frog method}
+  Here we explain how we solve the two equations using leap-frog method,
+   \subsubsection{$\pi$ equation}
+ for the $\pi$ equation we have,
+    \be
+      \pi_{n+1}=\pi_{n} + \pi'_{n+\frac{1}{2}} \Delta \tau
+    \ee
+     \be
+  \pi'_{n+\frac{1}{2}}=\zeta_{n+\frac{1}{2}}  -\mathcal{H}_{n+\frac{1}{2}}  \pi_{n+\frac{1}{2}}  +\Psi_{n+\frac{1}{2}} 
+      \ee
+      According to the definition, since the equation for updating $\pi$ is linear we do not have any trouble with non-linear terms and this part is done like linear equations.\\
+      The background part  is better to be updated  before this step to have $a_{kess}$ at (n+1/2) and then having $\mathcal{H}(n+1/2)$. 
+      Just note that making $\zeta$ updating at half steps help us because we need all the terms in $\zeta'(n)$ at integer steps. \\
+      Since the scalar field Stress energy tensor must be synchronized with particles stress tensor, we need to have all the variables at the same step which is $n$, so we need to write all the terms at step ${n+\frac{1}{2}} $ in terms of the values at step $n$ and $n+1$ as following, of course except $\zeta$ which we have it at $n+1/2$. The easiest model to calculate $F_{{n+\frac{1}{2}} }$ is by taking average of the next and last step, so
+     \be
+     \pi_{n+\frac{1}{2}} = \frac{ \pi_{n+1} + \pi_{n} }{2 }
+     \ee
+     and the same for all the other variables at step ${n+\frac{1}{2}}$. 
+     
+     For $\pi$ we have,
+     \be
+      \pi_{n+1}= \pi_{n} + \Delta  \tau \Big [  \zeta_{n+\frac{1}{2}}   -\mathcal{H}_{n+\frac{1}{2}}  ( \frac{ \pi_{n+1} + \pi_{n} }{2 })  +\Psi_{n+\frac{1}{2}} \Big ]
+     \ee
+         \be
+      \pi_{n+1}=  \frac{1}{1+ \mathcal{H}_{n+\frac{1}{2}} \Delta \tau/2}\Bigg[ \pi_{n} + \Delta \tau \Big [  \zeta_{n+\frac{1}{2}}   -\mathcal{H}_{n+\frac{1}{2}}   \frac{  \pi_{n} }{2 } +\Psi_{n+\frac{1}{2}}  \Big ] \Bigg]
+     \ee
+   As it is clear from the formula we don't have access to the $\Psi_{n+\frac{1}{2}} $ and $\Psi_{n+1} $  , so we use the extrapolation  to have them in next half steps,
+   \begin{align}
+      \Psi_{n+\frac{1}{2}} = \Psi_{n} + \Psi'_{n} \frac{d \tau}{2} 
+   \end{align} 
+
+   Moreover to have $\Psi'_{n}$ we  use the following formula by saving $\Psi$ at two different steps!
+   \be
+   \Psi'_{n} = \frac{\Psi_{n} - \Psi_{n-1} }{d \tau}
+   \ee
+\subsubsection{$\zeta$ equation}
+We chose to update $\zeta$ at half steps since then we need its derivative at integer steps and make the computation simplified. Moreover first $\pi$ is updated to have it at step $n+1$, then $\zeta$ is updated to get the values at $n+3/2$ and from taking the average of the two steps $(n+1/2)$ and $(n+3/2)$ we get $\zeta$ at step n which is synchronized with particles stress tensor at step n.
+  \be
+  \zeta_{n+\frac{3}{2}}=\zeta_{n+\frac{1}{2}} + \zeta'_{n+1} \Delta \tau \label{eqzeta}
+  \ee
+  Just note that in the last step $\pi$ is updated, so at the current state we have $\zeta_{n+1/2}$ , $\pi_{n+1}$ and $\zeta_{n}$ .
+   $\zeta_{n+1/2}$ which is obtained in the previous loop, $\zeta_{n}$ which in the previous loop was the average of $\zeta_{n-1/2}$ and $\zeta_{n+1/2}$, and $\pi_n$ was recently updated. \\
+   $ \zeta'_{n}$ in the equation \ref{eqzeta} reads from the differential equation as following,
+  \begin{align}
+  \zeta'_{n+1} &= 3 \mathcal{H}_{n+1}(w \zeta_{n+1} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} \\ \nonumber &
+   % Second order terms
+     +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n+1} (1+w)\pi_{n+1} {\nabla^2 \pi_{n+1} }
+      %////////////////
+        +  (1-c_s^2)  { (\zeta_{n+1} + \Psi_{n+1}) } \nabla^2 {\pi_{n+1} }
+                                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n+1} . \nabla \pi_{n+1}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n+1} . \nabla \pi_{n+1} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n+1}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n+1} . \nabla \pi_{n+1}} 
+    %//////////////// 
+     +2   (1-c_s^2){\nabla  \pi_{n+1} . {  \nabla {  (\zeta_{n+1} + \Psi_{n+1})   }}}   
+    \end{align}
+    
+    Since we need to have $\zeta_n$ at $\zeta'_{n+1}$ so we write $\zeta_{n+1} = \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}$ \\ 
+    We get,
+      \begin{align}
+  \zeta_{n+\frac{3}{2}} =&\zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg [3 \mathcal{H}_{n+1}(w\frac{\zeta_{n+\frac{3}{2}} + \zeta_{n+\frac{1}{2}} }{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} 
+    \nonumber \\ &
+  % Second order terms
+     +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n+1} (1+w)\pi_{n+1} {\nabla^2 \pi_{n+1} }
+      %////////////////
+        +  (1-c_s^2)  { \Big( \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big) } \nabla^2 {\pi_{n+1} }
+                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n+1} . \nabla \pi_{n+1}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n+1} . \nabla \pi_{n+1} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n+1}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n+1} . \nabla \pi_{n+1}} 
+    %//////////////// 
+    \nonumber \\ &
+     +2   (1-c_s^2){\nabla  \pi_{n+1} . {  \nabla {  \Big(\ \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big)   }}}    \Bigg]
+    \end{align}
+As one can see the term $ \nabla   \Big( \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big)  $ is somehow problematic, since we cannot factorize the $\zeta_{n+3/2}$ and $\zeta_{n+1/2}$ simply. Here we use the predictor-corrector method to solve this equation. \\
+ As the first guess we take $\zeta_{n+1} = \zeta_{n+1/2} $, which means we have neglected the term $\zeta'_{n+1/2} d\tau/2 $, then we get the following equation,
+       \begin{align}
+  \zeta_{n+\frac{3}{2}} =&\zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg [3 \mathcal{H}_{n+1}(w\frac{\zeta_{n+\frac{3}{2}} + \zeta_{n+\frac{1}{2}} }{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} 
+    \nonumber \\ &
+  % Second order terms
+     +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n+1} (1+w)\pi_{n+1} {\nabla^2 \pi_{n+1} }
+      %////////////////
+        +  (1-c_s^2)  { \Big( \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big) } \nabla^2 {\pi_{n+1} }
+                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n+1} . \nabla \pi_{n+1}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n+1} . \nabla \pi_{n+1} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n+1}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n+1} . \nabla \pi_{n+1}} 
+    %//////////////// 
+    \nonumber \\ &
+     +2   (1-c_s^2)\nabla  \pi_{n+1} . {  \nabla {  \Big({\zeta_{n+1/2} + \Psi_{n+1} \Big)   } }}    \Bigg]
+    \end{align}
+    %%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%
+    Factorizing $\zeta_{n+3/2}$ gives,
+     \begin{align}
+  \zeta_{n+\frac{3}{2}} & \Big[ 1-   3 \mathcal{H}_{n+1}  w   \Delta \tau   /2   - (1-c_s^2)   \nabla^2 {\pi_{n+1} }   \Delta \tau   /2 \Big] =\zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg [   3 \mathcal{H}_{n+1} ( w \frac{\zeta_{n+\frac{1}{2}}}{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  
+      \nonumber \\ &
++c_s^2 \nabla^2 \pi_{n+1} 
+  % Second order terms
+     +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n+1} (1+w)\pi_{n+1} {\nabla^2 \pi_{n+1} }
+      %////////////////
+        +  (1-c_s^2)  { \Big( \frac{\zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big) } \nabla^2 {\pi_{n+1} }
+                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n+1} . \nabla \pi_{n+1}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n+1} . \nabla \pi_{n+1} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n+1}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n+1} . \nabla \pi_{n+1}} 
+    %//////////////// 
+    \nonumber \\ &
+     +2   (1-c_s^2)\nabla  \pi_{n+1} . {  \nabla {  \Big({\zeta_{n+1/2} + \Psi_{n+1} \Big)   } }}    \Bigg]
+    \end{align}
+    Finally we can write the below equation,
+      \begin{align}
+  \zeta_{n+\frac{3}{2}} &  =\frac{1}{1-   3 \mathcal{H}_{n+1}  w   \Delta \tau   /2   - (1-c_s^2)   \nabla^2 {\pi_{n+1} }   \Delta \tau   /2 }  \Bigg[ \zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg (   3 \mathcal{H}_{n+1} ( w \frac{\zeta_{n+\frac{1}{2}}}{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  
+      \nonumber \\ &
++c_s^2 \nabla^2 \pi_{n+1} 
+  % Second order terms
+     +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n+1} (1+w)\pi_{n+1} {\nabla^2 \pi_{n+1} }
+      %////////////////
+        +  (1-c_s^2)  { \Big( \frac{\zeta_{n+1/2} }{2}+ \Psi_{n+1} \Big) } \nabla^2 {\pi_{n+1} }
+                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n+1} . \nabla \pi_{n+1}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n+1} . \nabla \pi_{n+1} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n+1}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n+1} . \nabla \pi_{n+1}} 
+    %//////////////// 
+    \nonumber \\ & 
+     +2   (1-c_s^2)\nabla  \pi_{n+1} . {  \nabla {  \big({\zeta_{n+1/2} + \Psi_{n+1} \big)   } }}    \Bigg)   \Bigg]
+    \end{align}
+      which at linear order we get the same equation as we had before,
+  \be
+   \zeta_{n+\frac{3}{2}}= \frac{1}{1-  3   \mathcal{H}_{n+1} w \Delta \tau/2 } \Bigg[ \zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n+1}\Big( \frac{ w\zeta_{n+\frac{1}{2}} }{2} +c_s^2 \Psi_{n+1} \Big)  -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} \Bigg) \Bigg]
+  \ee
+It is very important to check everything for the first loop specifically! For the first loop we first compute $\zeta^{(-1/2)}$ by $\zeta_{-1/2} = \zeta_0 - \zeta'_{0} d\tau/2$  and then $\zeta$ is updated to have $\zeta^{(1/2)}$ from the values of $\Psi^{(0)}$ but we take $\Phi'^{(0)}=0$ which is an approximation in our scheme.\\
+Then we go through the procedure which is the same for all loops (first loop included), which we update $\pi$ to have it at step 1 and then we update $\zeta$ to have it at step $3/2$ during all of these procedures, $\Phi$ is assumed to be constant and we use $\Phi^{(1/2)}= \Phi^{(0)}$ since in the first loop $\Phi'$ is zero! So this is an approximation that in the first loop we take $\Psi'=0 $ and use the same $\Phi$ at 1/2 and 0 step the same. But in the other loops everything seems correct as following,\\
+To compute $\zeta_{-1/2}$ we just use the linear equation for $\zeta'_{0}$ and also neglect $\Phi'_0$.\\
+The whole updating loop is as following,\\
+{\color{red}NOTE!   \\
+%\be
+%\zeta^{n+1/2}, \zeta^{n}, \pi^{n},  \Psi^{n},  \Psi'^{n}   \longrightarrow  a_{kess}^{n+1/2}, \Psi^{n+1/2}, \zeta^{n+1/2},  \pi^{n+1}  \longrightarrow a_{kess}^{n+1},\pi^{n+1}, \Psi^{n+1},     \zeta^{n+3/2}.  
+%\ee
+Another way to update the fields is like velocities and positions and to compute $\zeta(n+1/2)$ just from $\zeta(n-1/2)$ and then compute $\zeta'(n)$, $\zeta'(n+1/2)$ and then extrapolate to compute $\zeta(n+1)$.}
+
+{{\color{Blue}Approximations:}}\\
+{\color{red} The important approximations here are:\\
+1- At the first loop we take $\Phi'=0$\\
+2- To compute $\zeta_{-1/2}$ we neglect non-linear terms, but it should not be important, since we use predictor corrector method in other loops, which correct the values.
+3- The value of $\Phi^{(n+1)} = \Phi^{(n)} + \Phi '^{(n)} \times d \tau  $ to compute $\zeta^{n+3/2}$ which again at the first loop we assume $\Phi^{(1)} = \Phi^{(0) }$\\
+4- Since we do not have $\Phi^{'(n+1)}$ we assume that it does not change fast, so we take $\Phi^{'(n+1)} = \Phi'^{(n) }$ or equivalently $\Phi''^{(n)} \approx 0$ \\
+All the top approximations can be suppressed by increasing the number of kessence update or decreasing the time stepping of Gevolution.\\
+5- We use predictor-corrector method for couple of times in each loop to correct our bad guess of non-linear term $\nabla \zeta_{n+1})$\\
+}
+\\Before talking about predictor-corrector method, we mention the important parts in the Gevolution which is changed for non-linear implementation,
+\\
+The parameters are the same as linear part, so we just need to check the updatings in the main loop which is as following and the same as linear updating!
+  \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+//**********************
+//Kessence - LeapFrog:START
+//**********************
+  double a_kess=a;
+	for (i=0;i<sim.nKe_numsteps;i++)
+	{
+    //First we update zeta to have it at 0-1/2 just in the first loop
+    if(cycle==0)
+    {
+      for (x.first(); x.test(); x.next())
+      {
+        //computing zeta(-1/2)
+        zeta_half(x) =zeta_integer(x) - 0.5 * dtau * ( 3. * Hconf(a_kess, fourpiG, cosmo) * ( cosmo.w_kessence * zeta_integer(x) + cosmo.cs2_kessence * phi(x) - chi(x) ) - cosmo.cs2_kessence * (3. * Hconf(a_kess, fourpiG, cosmo) * Hconf(a_kess, fourpiG, cosmo) - 3. * Hconf_prime(a_kess, fourpiG, cosmo) ) * pi_k(x));
+        //Approximations: 1-The linear definition of derivative
+        //                2-phi_prime = 0
+        //                3- cs^2 Laplace pi =0
+        //                4- neglecting the non-linear terms for computing zeta(-1/2)
+        //Phi_prime is omitted since in the first loop is zero
+        // We also have neglected Laplace term since Laplace itself is small and is multiplied to cs^2 which is very suppressed!
+        // TO MAKE SURE THE APPROXIMATIONS WORK WELL, WE NEED TO INCREASE THE PRECISION AND SEE THE IMPROVEMENTS! 
+      }
+      //Updating zeta to get zeta(1/2) and zeta(0) just in the first loop
+      // In sum: zeta(1/2) = zeta(-1/2)=zeta(0) + zeta'(0) dtau for the first loop
+      update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
+      zeta_half.updateHalo();
+      zeta_integer.updateHalo();
+    }
+
+    //Since we have pi(n+1)=pi(n) + pi'(n+1/2), and in pi'(n+1/2) we have H(n+1/2) we update the background before updating the pi to have H(n+1/2)
+    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0);
+    //First we update pi to have it at n+1 (at first loop from the value at (0) and the value of zeta at 1/2 and H(n+1/2) we update pi at (1))
+    update_pi_k(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo),Hconf_prime(a_kess, fourpiG, cosmo)); // H_old is updated here in the function
+		pi_k.updateHalo();
+    // Now we have pi(n+1) and a_kess(n+1/2) so we update background by halfstep to have a_kess(n+1) to calculate zeta'(n+1) to have zeta(n+1/2)=zeta(n-1/2) + zeta'(n+1) dtau
+    rungekutta4bg(a_kess, fourpiG, cosmo,  dtau  / sim.nKe_numsteps / 2.0 );
+    //Now from the values of zeta at step (1/2) we calculate zeta(3/2) and then we calculate zeta(1) which is synched with pi(1)
+    update_zeta(dtau/ sim.nKe_numsteps, dx, a_kess, phi, phi_old, chi, chi_old, pi_k, zeta_half, zeta_integer, cosmo.Omega_kessence, cosmo.w_kessence, cosmo.cs2_kessence, Hconf(a_kess, fourpiG, cosmo), Hconf_prime(a_kess, fourpiG, cosmo));
+    zeta_half.updateHalo();
+    zeta_integer.updateHalo();
+
+	}
+#ifdef BENCHMARK
+    kessence_update_time += MPI_Wtime() - ref_time;
+    ref_time = MPI_Wtime();
+#endif
+//**********************
+//Kessence - LeapFrog: End
+//**********************
+  \end{lstlisting}
+ The most important changes compared to linear equations occur in the Gevolution.hpp, since we need to add, non-linear terms in the stress tensor correctly, adding non-linear terms in the updating equations and also predictor-corrector method should be added.\\
+ The stress tensor of kessence is modified as following,
+   \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+  //////////////////////////
+template <class FieldType>
+void projection_Tmunu_kessence( Field<FieldType> & T00, Field<FieldType> & T0i, Field<FieldType> & Tij,
+   double dx, double a, Field<FieldType> & phi,Field<FieldType> & phi_old, Field<FieldType> & chi, Field<FieldType> & pi_k, Field<FieldType> & zeta_integer, double Omega_fld , double w, double cs2, double Hcon, double fourpig, int method )
+{
+    Site xField(phi.lattice());
+    double coeff1, coeff2, coeff3, Hdot, psi;
+    double gradientpi_squared, Dx_pi_Dx_pi, Dx_pi_Dy_pi, Dx_pi_Dz_pi, Dy_pi_Dy_pi, Dy_pi_Dz_pi, Dz_pi_Dz_pi;
+    Site x(phi.lattice());
+    double gradient_pi2;
+    coeff1=Omega_fld*pow(a,-3.*w)*(1.+w)/(cs2);
+    coeff2=Omega_fld*pow(a,-3.*w)*(1.+w);
+
+    for (xField.first(); xField.test(); xField.next())
+      {
+        //***************
+        //(D_i pi)^2
+        //***************
+        gradientpi_squared =0.25*(pi_k(xField+0) - pi_k(xField-0))* (pi_k(xField+0) - pi_k(xField-0))/(dx*dx);
+        gradientpi_squared+=0.25*(pi_k(xField+1) - pi_k(xField-1))* (pi_k(xField+1) - pi_k(xField-1))/(dx*dx);
+        gradientpi_squared+=0.25*(pi_k(xField+1) - pi_k(xField-2))* (pi_k(xField+1) - pi_k(xField-2))/(dx*dx);
+        //***************
+        //(X,X):::::::> Dx_pi_Dx_pi = GradX(pi).GradX(pi)
+        //***************
+        Dx_pi_Dx_pi =0.25*(pi_k(xField+0) - pi_k(xField-0))* (pi_k(xField+0) - pi_k(xField-0))/(dx*dx);
+        //***************
+        //(X,Y):::::::> Dx_pi_Dy_pi = GradX(pi).GradY(pi) = GradY(pi).GradX(pi)
+        //***************
+        Dx_pi_Dy_pi =0.25*(pi_k(xField+0) - pi_k(xField-0))* (pi_k(xField+1) - pi_k(xField-1))/(dx*dx);
+        //***************
+        //(X,Z):::::::> Dx_pi_Dz_pi = GradX(pi).GradZ(pi)
+        //***************
+        Dx_pi_Dz_pi =0.25*(pi_k(xField+0) - pi_k(xField-0))* (pi_k(xField+2) - pi_k(xField-2))/(dx*dx);
+        //***************
+        //(Y,Y):::::::> Dy_pi_Dy_pi = GradY(pi).GradY(pi)
+        //***************
+        Dy_pi_Dy_pi =0.25*(pi_k(xField+1) - pi_k(xField-1))* (pi_k(xField+1) - pi_k(xField-1))/(dx*dx);
+        //***************
+        //(Y,Z):::::::> Dy_pi_Dz_pi = Grady(pi).Gradz(pi)
+        //***************
+        Dy_pi_Dz_pi =0.25*(pi_k(xField+1) - pi_k(xField-1))* (pi_k(xField+2) - pi_k(xField-2))/(dx*dx);
+        //***************
+        //(Z,Z):::::::> Dz_pi_Dz_pi = Gradz(pi).Gradz(pi)
+        //***************
+        Dz_pi_Dz_pi =0.25*(pi_k(xField+2) - pi_k(xField-2))* (pi_k(xField+2) - pi_k(xField-2))/(dx*dx);
+        //***************
+        psi= phi(xField) - chi(xField);
+
+        //************************
+        //STRESS TENSOR COMPONENTS
+        //************************
+        // 0-0-component: (Time,Time)
+        T00(xField)       = - coeff1 * ( -3. * cs2 * Hcon * pi_k(xField) + zeta_integer(xField)
+                          /*Non-linear*/ - (1. - 2. * cs2) * gradientpi_squared / 2.  );
+        //*************************************************************************************
+        // 1-1-component: (X,X)
+        Tij(xField, 0, 0) = + coeff2 * (-3.* w * Hcon* pi_k(xField) + zeta_integer(xField)
+                          /*Non-linear*/ - gradientpi_squared / 2.  + Dx_pi_Dx_pi );
+        //*************************************************************************************
+        // 2-2-component: (Y,Y)
+        Tij(xField, 1, 1) = + coeff2 * (-3.* w * Hcon* pi_k(xField) +   zeta_integer(xField)
+                          /*Non-linear*/ - gradientpi_squared / 2.  + Dy_pi_Dy_pi );
+        //*************************************************************************************
+        // 3-3-component: (Z,Z)
+        Tij(xField, 2, 2) = + coeff2 * (-3.* w * Hcon* pi_k(xField) +   zeta_integer(xField)
+                          /*Non-linear*/ - gradientpi_squared / 2.  + Dz_pi_Dz_pi );
+        //*************************************************************************************
+        // 1-2-component: (X,Y)
+        Tij(xField, 0, 1) = + coeff2 * ( /*Non-linear*/ Dx_pi_Dy_pi);
+        //*************************************************************************************
+        // 1-3-component: (X,Z)
+        Tij(xField, 0, 2) = + coeff2 * (/*Non-linear*/ Dx_pi_Dz_pi);
+        //*************************************************************************************
+        // 2-3-component: (Y,Z)
+        Tij(xField, 1, 2) = + coeff2 * (/*Non-linear*/ Dy_pi_Dz_pi);
+        //*************************************************************************************
+
+        //*******************************
+        //In the case of Vector parabolic
+        //*******************************
+        if(method==1) // method=1 Turn on vector elliptic
+        {
+					// T01:(Time,X)
+          T0i(xField, 0)  =  -coeff2 * (1. - /*Non-linear*/ (1./cs2 -1.) * gradientpi_squared / 2.) *       (pi_k(xField + 0) - pi_k(xField - 0)) / (2. * dx);
+          //*************************************************************************************
+					// T02:(Time,Y)
+          T0i(xField, 1)  =  -coeff2 *  (1. - /*Non-linear*/ (1./cs2 -1.) * gradientpi_squared / 2.) *       (pi_k(xField + 1) - pi_k(xField - 1)) / (2. * dx);
+          //*************************************************************************************
+          // T03:(Time,Z)
+          T0i(xField, 2)  =  -coeff2 *  (1. - /*Non-linear*/ (1./cs2 -1.) * gradientpi_squared / 2.) *       (pi_k(xField + 2) - pi_k(xField - 2)) / (2. * dx);
+          //*************************************************************************************
+        }
+      }
+    }
+    \end{lstlisting}
+    The updating $\pi$ equation does not change, since by definition is linear,
+    \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+    	void update_pi_k( double dtau, double dx,double a, Field<FieldType> & phi, Field<FieldType> & phi_old, Field<FieldType> & chi,Field<FieldType> & chi_old, Field<FieldType> & pi_k, Field<FieldType> &,  Field<FieldType> & zeta_half , double Omega_fld ,double w, double cs2, double Hcon, double  H_prime)
+			{
+        double psi, psi_prime, psi_half;
+        double Coeff1 = 1./(1. + Hcon * dtau/2.);
+			  Site x(phi.lattice());
+			  for (x.first(); x.test(); x.next())
+			    {
+            psi=phi(x) - chi(x);
+            psi_prime= ((phi(x) - chi(x))-(phi_old(x) - chi_old(x)))/dtau;
+            psi_half= psi + psi_prime * dtau/2.; //psi_half (n+1/2) = psi(n) + psi_prime'(n) dtau/2
+            //*****************************************
+            //pi Updating which is linear by definition
+            //*****************************************
+            pi_k(x)=Coeff1 * (pi_k(x)  + dtau * ( zeta_half(x) - Hcon * pi_k(x)/2. + psi_half ) ); //  pi_k(n+1)
+            //*************************************************************************************
+			    }
+			}
+	 \end{lstlisting}
+	 The most challenging part is implementing non-linear terms in the updating $\zeta$ equation and since we use some approximations we first introduce the predictor-corrector idea and then put the C++ code.
+	  \paragraph{Predictor-corrector method}
+This is an important part which should be done to have the errors propagation under the control! As we have explained already in the first loop of updating we take $\nabla \zeta_{n+1} = \nabla \zeta_{n+1/2}$ which is just prediction and then we calculate $\zeta_{n+3/2}$ from the predictor and then we compute $\zeta_{n+1}$ by averaging the two $\zeta$ at half steps. \\
+So at the end we have $\zeta_{n+1}$ which we did not have in the start, so we are going to use $ \zeta_{n+1}$ as new value to compute $\zeta_{n+3/2}$ and then again we calculate new corrected $\zeta_{n+1}$ and we take it as initial value to compute the corrected $\zeta_{n+3/2}$ and $\zeta_{n+1}$ \\
+The best way to do it is first to check that $\zeta_n$ from the next order corrector is  near to original one (like the relative error $2\frac{\zeta_1-\zeta_2}{\zeta_1+\zeta_2}<0.01$, which gives less than 1$\%$ error).\\
+  The code for predictor corrector method in C++ is written in below, note that all the lines have comments make the code easier to follow, \\
+	     \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+  	// We use predictor corrector method to calculate \zeta precisely for non-linear case. (for linear equation is does not make better)
+			template <class FieldType>
+			void update_zeta(double dtau, double dx,double a, Field<FieldType> & phi, Field<FieldType> & phi_old, Field<FieldType> & chi,Field<FieldType> & chi_old, Field<FieldType> & pi_k, Field<FieldType> & zeta_half , Field<FieldType> & zeta_integer, double Omega_fld ,double w, double cs2, double Hcon, double H_prime )
+			{
+        double Gradphi_Gradpi, Gradpsi_Gradpi, Gradpi_Gradpi, GradPsiZeta_Gradpi, Dx_psi, Dy_psi, Dz_psi;
+			  double C1, C2, C3, psi, psi_old, psi_prime, phi_prime, Laplacian_pi, zeta_old_half;
+        //Since a_kess is at (n+1) so H_prime is at (n+1) which is needed to calculate zeta(n+1/2)
+        //**************************************************************
+        //Coefficient two, H(n+1), H_prime(n+1) since BG already updated
+        //**************************************************************
+        C2 = cs2 * (3. * Hcon * Hcon - 3. * H_prime );
+        //**************************************************************
+        //Coefficient three, H(n+1), H_prime(n+1) since BG already updated
+        //**************************************************************
+        C3 = (2. + 3. * w + cs2 ) *  Hcon/2.;
+
+				Site x(phi.lattice());
+				for (x.first(); x.test(); x.next())
+					{
+            //****************************************************************
+            //Laplace pi, pi(n+1) since pi updated before zeta and a_kess(n+1)
+            //****************************************************************
+						Laplacian_pi= pi_k(x-0) + pi_k(x+0) - 2. * pi_k(x);
+						Laplacian_pi+=pi_k(x+1) + pi_k(x-1) - 2. * pi_k(x);
+						Laplacian_pi+=pi_k(x+2) + pi_k(x-2) - 2. * pi_k(x);
+            Laplacian_pi= Laplacian_pi/(dx*dx);
+            //********************************************
+            //psi(n), APPROXMIATION:we take psi(n+1)=psi(n)
+            //*********************************************
+						psi=phi(x) - chi(x);
+            //***************************
+            //Coefficient one, H( at n+1)
+            //***************************
+            C1 = 1./(1. -  3. * Hcon * w  * dtau/2. - (1. - cs2) *  Laplacian_pi * dtau/2.);
+            //**********************************************
+            //phi'(n), APPROXMIATION:we take phi'(n+1)=phi'(n)
+            //**********************************************
+					  phi_prime= (phi(x) - phi_old(x))/dtau; //phi_prime(n+1) since we want to use it to compute zeta (n+3/2)
+            //NOTE: We dont have phi'(n+1) since it will be updated by particles later, but we  remains contant and phi_prime(n) = phi_prime(n+1) or take the second derivative for this period approximately to zero!
+            //********************************
+            //psi'(n)
+            //psi(n+1) = psi(n) + psi'(n) dtau
+            //********************************
+            psi_prime= ((phi(x) - chi(x))-(phi_old(x) - chi_old(x)))/dtau;
+            psi = psi + psi_prime * dtau;
+            //**********
+            //Grad_i Psi
+            //**********
+            Dx_psi = ((phi(x + 0) - chi(x + 0)) - (phi(x - 0) - chi(x - 0)));
+            Dy_psi = ((phi(x + 1) - chi(x + 1)) - (phi(x - 1) - chi(x - 1)));
+            Dz_psi = ((phi(x + 2) - chi(x + 2)) - (phi(x - 2) - chi(x - 2)));
+            //*******************
+            //Grad_phi . Grad_pi
+            //******************
+            Gradphi_Gradpi= 0.25 * (phi(x + 0)  - phi(x - 0)) * (pi_k(x + 0) - pi_k(x - 0)) / (dx * dx);
+            Gradphi_Gradpi+=0.25 * (phi(x + 1)  - phi(x - 1)) * (pi_k(x + 1) - pi_k(x - 1)) / (dx * dx);
+            Gradphi_Gradpi+=0.25 * (phi(x + 2)  - phi(x - 2)) * (pi_k(x + 2) - pi_k(x - 2)) / (dx * dx);
+            //*******************
+            //Grad_psi . Grad_pi
+            //******************
+            Gradpsi_Gradpi= 0.25 * (Dx_psi) * (pi_k(x+0) - pi_k(x-0)) / (dx * dx);
+    			  Gradpsi_Gradpi+=0.25 * (Dy_psi) * (pi_k(x+1) - pi_k(x-1))/ (dx * dx);
+    			  Gradpsi_Gradpi+=0.25 * (Dz_psi) * (pi_k(x+2) - pi_k(x-2))/ (dx * dx);
+            //*************
+            //Gradpi_Gradpi
+            //*************
+            Gradpi_Gradpi= 0.25 * (pi_k(x + 0)  - pi_k(x - 0)) * (pi_k(x + 0) - pi_k(x - 0)) / (dx * dx);
+            Gradpi_Gradpi+=0.25 * (pi_k(x + 1)  - pi_k(x - 1)) * (pi_k(x + 1) - pi_k(x - 1)) / (dx * dx);
+            Gradpi_Gradpi+=0.25 * (pi_k(x + 2)  - pi_k(x - 2)) * (pi_k(x + 2) - pi_k(x - 2)) / (dx * dx);
+            //*************************************************************
+            //GradPsiZeta_Gradpi = Grad_pi . Grad_ (zeta + psi)
+            //Grad_pi . Grad_ (zeta + psi) = Grad_pi (Grad_zeta + Grad_Psi)
+            //*************************************************************
+            GradPsiZeta_Gradpi= 0.25* (zeta_half(x+0) - zeta_half(x-0) + Dx_psi) * (pi_k(x+1) - pi_k(x-1)) / (dx * dx);
+            GradPsiZeta_Gradpi+=0.25* (zeta_half(x+1) - zeta_half(x-1) + Dy_psi) * (pi_k(x+1) - pi_k(x-1)) / (dx * dx);
+            GradPsiZeta_Gradpi+=0.25* (zeta_half(x+2) - zeta_half(x-2) + Dz_psi) * (pi_k(x+2) - pi_k(x-2)) / (dx * dx);
+            //***********************
+            // FULL Updating equation
+            //***********************
+            zeta_old_half=zeta_half(x); // zeta(n+1/2)
+
+            //***************************************
+            // zeta(n+3/2) = zeta(n+1/2) + zeta'(n+1)
+            //***************************************
+            zeta_half(x) =        C1 * ( zeta_half(x) + dtau * (
+            /*Linear(1,2,3)*/      + 3. * Hcon * ( w * zeta_half(x)/2. + cs2 * psi ) - C2 * pi_k(x)
+            /*Linear(4,5)*/        + 3. * cs2 * phi_prime + cs2 * Laplacian_pi
+            /*Non-linear(1,2)*/    + 2. * cs2 * phi(x) * Laplacian_pi - (1. - cs2) * psi * Laplacian_pi
+            /*Non-linear(3)  */    - 3. * cs2 * Hcon * (1. + w) * pi_k(x) * Laplacian_pi
+            /*Non-linear(4)  */    +(1. - cs2) * (zeta_half(x)/2. + psi) * Laplacian_pi
+            /*Non-linear(5,6,7)*/  - cs2 * Gradphi_Gradpi + (2. * cs2 -1.) * Gradpsi_Gradpi - C3 * Gradpi_Gradpi
+            /*Non-linear(8)  */    + 2. * (1. - cs2) * GradPsiZeta_Gradpi
+                                                                 )
+                                        );
+            //**********************************************************************
+            //computing zeta (n+1) by taking average ove zeta(n+3/2) and zeta(n+1/2)
+            //**********************************************************************
+            zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n+1)
+
+            //**********************************************************************
+            //**********************************************************************
+            //**********************************************************************
+            //PREDICTOR-CORRECTOR METHOD
+            //**********************************************************************
+            //**********************************************************************
+            //**********************************************************************
+
+            //*****************************
+            //Predictor-corrector variables
+            //*****************************
+            double zeta_predictor_int_n0, zeta_prime_int_n0, zeta_predictor_half_n1 ;
+            int n_correcor_steps=10, numerator;
+            numerator=0;
+            //********************************************
+            //n_correcor_steps loops over corrector method
+            //********************************************
+            for (int i=1; i<n_correcor_steps+1; i++)
+            {
+            //********************************************
+            //Initiation of the method from the last loop
+            //********************************************
+            zeta_predictor_int_n0 = zeta_integer(x);  //zeta (n+1) = (zeta(n+3/2)+zeta(n+1/2)) /2
+            //*************************************************************
+            //Corrected: GradPsiZeta_Gradpi = Grad_pi . Grad_ (zeta + psi)
+            //Grad_pi . Grad_ (zeta + psi) = Grad_pi (Grad_zeta + Grad_Psi)
+            //Where zeta_integer is the corrected one at step (n+1)
+            //Before we have zeta_half because of approximation
+            //*************************************************************
+            GradPsiZeta_Gradpi= 0.25* (zeta_integer(x+0) - zeta_integer(x-0) + Dx_psi) * (pi_k(x+1) - pi_k(x-1)) / (dx * dx);
+            GradPsiZeta_Gradpi+=0.25* (zeta_integer(x+1) - zeta_integer(x-1) + Dy_psi) * (pi_k(x+1) - pi_k(x-1)) / (dx * dx);
+            GradPsiZeta_Gradpi+=0.25* (zeta_integer(x+2) - zeta_integer(x-2) + Dz_psi) * (pi_k(x+2) - pi_k(x-2)) / (dx * dx);
+            //***************************************
+            // zeta'(n+1) from the new values at n+1
+            // like zeta_predictor_int_n0 (n+1)
+            //***************************************
+            zeta_prime_int_n0 =
+            /*Linear(1,2,3)*/      + 3. * Hcon * ( w * zeta_predictor_int_n0 + cs2 * psi ) - C2 * pi_k(x)
+            /*Linear(4,5)*/        + 3. * cs2 * phi_prime + cs2 * Laplacian_pi
+            /*Non-linear(1,2)*/    + 2. * cs2 * phi(x) * Laplacian_pi - (1. - cs2) * psi * Laplacian_pi
+            /*Non-linear(3)  */    - 3. * cs2 * Hcon * (1. + w) * pi_k(x) * Laplacian_pi
+            /*Non-linear(4)  */    +(1. - cs2) * (zeta_predictor_int_n0 + psi) * Laplacian_pi
+            /*Non-linear(5,6,7)*/  - cs2 * Gradphi_Gradpi + (2. * cs2 -1.) * Gradpsi_Gradpi - C3 * Gradpi_Gradpi
+            /*Non-linear(8)  */    + 2.* (1. - cs2) * GradPsiZeta_Gradpi;
+            //**************************************************************************
+            //Computing the zeta(n+3/2) from the new value of zeta'(n+1) and zeta(n+1/2)
+            //**************************************************************************
+            zeta_predictor_half_n1 = zeta_old_half + zeta_prime_int_n0 * dtau;
+            //***********************************************************************************
+            //Computing the corredcted zeta(n+1) from the new value of zeta(n+3/2) and zeta(n+1/2)
+            //************************************************************************************
+            zeta_predictor_int_n0  = (zeta_predictor_half_n1 + zeta_old_half)/2.;
+            //***********************************************************************************
+            // Now we must check the relative error between the two corrected and predicted ones zeta_integer(x)=zeta_predictor_int_n0 and the previous step: zeta_half(x), zeta_integer(x)
+            //If the error has reached less than 10^-6% it breacks the loop
+            //***********************************************************************************
+            if (2.* abs(zeta_integer(x)-zeta_predictor_int_n0)/(zeta_integer(x)+zeta_predictor_int_n0)<1.e-8)break;
+             zeta_half(x)=zeta_predictor_half_n1; // zeta(n+3/2) after correction
+             zeta_integer(x)= (zeta_half(x) + zeta_old_half)/2.; //zeta(n+1) after correction
+             numerator++;
+            }
+            if (numerator==n_correcor_steps) cout << "\033[1;31mbold WARNING: PRECISION ERROR ON KESSENCE FIELD ZETA, More than 1% Error\033[0m\n" << '\n';
+          }
+        }
+  \end{lstlisting}
+  
+      As we know although the implementation is checked well but it is very important to design some tests to check the terms as precise as possible.
+      \subsection{Some important changes in the code and the way we solve equations {\color{red} This is completely wrong!}}
+      So after skyping with Martin and Julian, we have realized that it is better to update kessence field after particles to have potential at step $n+1$, so if we do this the only change is the fact that $\Phi_{old}$ is really $\Phi(n)$ and new $\Phi$ is at step (n+1), so to compute $\Phi'(n+1)$. In order to compute $\Phi_{n+1/2}$ which appears in $\pi$ updating we have,
+      \be
+      \Psi_{n+1/2} = \frac{\Psi_{n+1} + \Psi_{n} }{2}
+      \ee
+      where $\Psi_{n+1}$ and $\Psi_{n+1}$ the new and old value of $\Psi$ and to compute $\Phi_{n+1}$ and $\Phi'_{n+1}$ is very simple! Since we already have $\Phi_{n+1}$ because of particles update and to compute $\Phi'_{n+1}$ we have,
+      \be
+      \Phi'_{n+1} = \frac{\Phi_{n+1} - \Phi_{n}}{d\tau}
+      \ee
+      {\color{red} So we have a small change in the way we calculate the potentials and their derivatives in Gevolution.hpp and the place where we update the kessence fields in the main.hpp}
+      Moreover we have adde a integer in the Gevolution, NL$\_$kessence which can get 0 or 1 and in the 0 case we get linear kessence evolution and in case 1 we inclue non-linearity as well.
+      {\color{red} This is  wrong! because in any case if we put kessence update after or before particles we dont have $\Phi$ at different steps, the potentials are updated in the next loop!}
+      \\
+      Another discussion I had with Julian on this is,
+      \begin{figure} [H]
+ \includegraphics [scale=0.6]{Julian_dis_0001}
+ \end{figure}
+No this is not what we are doing, we are updating the velocities half step ahead of the positions not behind!   
+	\subsection{ Important changes}
+	{\color{red} Most of the steps in the precious sections are changes because of better ideas!\\
+	-Basically we do not need predictor-corrector method, since we update $\zeta(n+1/2)$ from $\zeta(n-1/2)$ using $\zeta'(n)$ which is just a function of $\nabla(\zeta(n))$ which we have it from $\zeta_{int}$\\
+	-Now we update both $\zeta_{int}$ and $\zeta_{half}$ separately, one in zetaupdate the other one in the pi-update, since the backgrounds are in different time!}
+	After having chat with Julian as following,
+	      \begin{figure} [H]
+ \includegraphics [scale=0.6]{Jul_dis_001}
+ \end{figure}
+ 	      \begin{figure} [H]
+ \includegraphics [scale=0.6]{Jul_dis_002}
+ \end{figure}
+ 	      \begin{figure} [H]
+ \includegraphics [scale=0.6]{Jul_dis_003}
+ \end{figure}
+We see that it is much better to go over loop in a way that we do not need $\Phi(n+1)$ or $\Phi'(n+1)$ which will be calculated at next loop!\\
+To do so I will change the updatings as following, but most of the main concepts of course remain the same, just the first loop and .. would change.
+So all the updating equation for $\zeta$ and $\pi$ are of course the same but the way we will go through Leap0frog should be changes as following!\\
+\begin{itemize}
+\item First we provide the initial condition for $\zeta(0)$, $\pi(0)$, $\Psi(0)$ \\
+\item Then we update $\zeta$ by minus half step from the values at step 0 to get $\zeta(-1/2)$, just at the first loop!\\
+\item So we are ready to go over the general loop, we first update $\zeta$ to have the value at $\zeta(1/2)$ from $\zeta(-1/2)$ and $\Phi(0)$, $\pi(0)$ , we compute $\zeta(1) = \zeta(1/2) + \zeta'(0) * d\tau$.\\
+\item Then we compute $\pi(1)$, from $\pi(0)$ and $\zeta'(1/2)$, $\Phi'(1/2)$ and $\Phi(1/2)$,
+\end{itemize}
+So in general, we have,
+\begin{itemize}
+\item First we compute $\zeta_{n+1/2} =\zeta_{n-1/2} + \zeta'(n) $, where in $\zeta'(n)$ we have everything at step n which we know the values!
+ \be
+  \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} + \zeta'_{n} \Delta \tau \label{eqzeta}
+  \ee
+   $ \zeta'_{n}$ in the equation \ref{eqzeta} reads from the differential equation as following,
+  \begin{align}
+  \zeta'_{n} &= 3 \mathcal{H}_{n}(w \zeta_{n} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
+  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \\ \nonumber &
+   % Second order terms
+     +2 c_s^2  \Phi_{n}  {\nabla^2 \pi_{n} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n} {\nabla^2 \pi_{n}}
+  %////////////////
+  -3 c_s^2 \mathcal{H}_{n} (1+w)\pi_{n} {\nabla^2 \pi_{n} }
+      %////////////////
+        +  (1-c_s^2)  { (\zeta_{n} + \Psi_{n}) } \nabla^2 {\pi_{n} }
+                                       \nonumber
+   \\
+    &
+    %//////////////// 
+             -c_s^2 {\nabla  \Phi_{n} . \nabla \pi_{n}}
+   %//////////////// 
+        +(2 c_s^2-1) {\nabla  \Psi_{n} . \nabla \pi_{n} }  
+   %//////////////// 
+ -\frac{\mathcal{H}_{n}} {2 } \Big(2+3w+c_s^2  \Big){\nabla  \pi_{n} . \nabla \pi_{n}} 
+    %//////////////// 
+     +2   (1-c_s^2){\nabla  \pi_{n} . {  \nabla {  (\zeta_{n} + \Psi_{n})   }}}   
+    \end{align}
+    Where we only need $\Phi(n)$, $\Phi'(n)$, $\pi(n)$, $\zeta(n) = \frac{\zeta(n-1/2) +\zeta(n+1/2)  }{2}$. We have all the quantities simply at step n, so we do not need any extrapolation and etc. \\
+    So by $\zeta(n) = \frac{\zeta(n-1/2) +\zeta(n+1/2)  }{2}$ we again can factorize and for the $\nabla ( \frac{\zeta_{(n-1/2)} +\zeta_{(n+1/2)}  }{2})$ which can be factorized we again use predictor-corrector method by guessing in the first loop that it is simply $\nabla  \zeta_{(n-1/2) /2}$
+  \item Then we compute $\zeta(n+1)$ which is synchronized with everything by $\zeta(n+1) = \zeta(n) + \zeta'(n) d\tau$, we have defined two fields one is $\zeta_{int}$ and  the other $\zeta_{half}$. But note that it is better to update it by $\zeta_{n+1} = \zeta_{n} + \zeta'_{n+1/2} d \tau$, but in this case we need to have $\Phi'(n+1/2) = \frac{\Phi(n+1) - \Phi(n)}{d \tau}$ and of course we need $\Phi(n+1)$ which we don't have access to.\\
+  {\color{red} Lets for the moment calculate  $\zeta_{n+1} = \zeta_{n} + \zeta'_{n+1/2} d \tau$ but take $\Phi'(n+1/2) = \Phi'(n)$ approximately which we guess is not a very far idea, but to be completely consistent its better to save three $\Phi$ and extrapolate to get $\Phi(n+1)$... but lets do the easiest for the moment! and if the solution is changed with increasing precision it means that our approximation is not very good! }
+\item After updating $\zeta(n+1/2)$, we update $\pi$ from n to n+1 as following,
+\be
+      \pi_{n+1}=\pi_{n} + \pi'_{n+\frac{1}{2}} \Delta \tau
+    \ee
+     \be
+  \pi'_{n+\frac{1}{2}}=\zeta_{n+\frac{1}{2}}  -\mathcal{H}_{n+\frac{1}{2}}  \pi_{n+\frac{1}{2}}  +\Psi_{n+\frac{1}{2}} 
+      \ee
+      According to the definition, since the equation for updating $\pi$ is linear we do not have any trouble with non-linear terms and this part is done like linear equations.\\
+      The background part  is better to be updated  before this step to have $a_{kess}$ at (n+1/2) and then having $\mathcal{H}(n+1/2)$. 
+      Just note that making $\zeta$ updating at half steps help us because we need all the terms in $\zeta'(n)$ at integer steps. \\
+      Since the scalar field Stress energy tensor must be synchronized with particles stress tensor, we need to have all the variables at the same step which is $n$, so we need to write all the terms at step ${n+\frac{1}{2}} $ in terms of the values at step $n$ and $n+1$ as following, of course except $\zeta$ which we have it at $n+1/2$. The easiest model to calculate $F_{{n+\frac{1}{2}} }$ is by taking average of the next and last step, so
+     \be
+     \pi_{n+\frac{1}{2}} = \frac{ \pi_{n+1} + \pi_{n} }{2 }
+     \ee
+     and the same for all the other variables at step ${n+\frac{1}{2}}$. 
+   
+     For $\pi$ we have,
+         \be
+      \pi_{n+1}=  \frac{1}{1+ \mathcal{H}_{n+\frac{1}{2}} \Delta \tau/2}\Bigg[ \pi_{n} + \Delta \tau \Big [  \zeta_{n+\frac{1}{2}}   -\mathcal{H}_{n+\frac{1}{2}}   \frac{  \pi_{n} }{2 } +\Psi_{n+\frac{1}{2}}  \Big ] \Bigg]
+     \ee
+   As it is clear from the formula we don't have access to the $\Psi_{n+\frac{1}{2}} $ and $\Psi_{n+1} $  , so we use the extrapolation  to have them in next half steps,
+   \begin{align}
+      \Psi_{n+\frac{1}{2}} = \Psi_{n} + \Psi'_{n} \frac{d \tau}{2} 
+   \end{align} 
+   Moreover to have $\Psi'_{n}$ we  use the following formula by saving $\Psi$ at two different steps!
+   \be
+   \Psi'_{n} = \frac{\Psi_{n} - \Psi_{n-1} }{d \tau}
+   \ee
+As it is clear we do not have any trouble with $\pi$ updating too, while in previous version of updating we were updating wrongly and $\zeta$ was ahead of potentials and we were using the wrong value for potentials.
+\end{itemize}
+To summerize:
+\begin{itemize}
+\item First loop:  $\Phi(0)$, $\zeta_{half}$ (-1/2), $\zeta_{int}$(0)
+\item At the end of the first loop we update particles and kessence fields $\zeta_{half}(1/2)$, $\zeta_{int} (1)$, $ \pi(1)$ and particles at step 1
+.\\
+.\\
+.
+\item $T_{\mu \nu}(n)$  from particles and kessence at step n $\longrightarrow$ $\Phi(n), \chi(n)$ from stress tensor $\longrightarrow$ 
+$\zeta_{half}(n+1/2), \zeta_{int}(n+1)$ $\longrightarrow$ $\pi(n+1)$ $ \longrightarrow$ particles move to step n+1 
+\end{itemize}
+Another note that should be taken into account is that:\\
+Since we have $\pi(n+1)=\pi(n) + \pi'(n+1/2)$, and in $\pi'(n+1/2)$ we have H(n+1/2) we update the background before updating the pi to have H(n+1/2), Moreover $\zeta(n+1) = \zeta(n+1/2) + \zeta'(n+1/2)$, so we put $\zeta_{int}$ updating in the pi updating, which is after background updating! So in the zeta updating we $\zeta_{half}$ updating and in the $\pi$ updating we have both $\pi$ and $\zeta_{int}$ updating.
+\\
+We also have saved three potentials in each step $\Phi(n)$, $\Phi(n-1)$ and $\Phi(n-2)$, so simply we have,\
+\be
+\Phi'(n) = \frac{\Phi(n) - \Phi(n-1)}{d\tau} \; \; \; \; \Phi'(n-1) = \frac{\Phi(n-1) - \Phi(n-2)}{d\tau}  \; \; \; \; \Phi''(n) = \frac{\Phi'(n) - \Phi'(n-1)}{d\tau}
+\ee
+So we have,
+\be
+\Phi'(n+1/2) = \Phi'(n-1/2) + \Phi''(n) d\tau.
+\ee
+so,
+\be
+\Phi'(n+1/2) = \Phi'(n) +  \frac{\Phi'(n) - \Phi'(n-1)}{d\tau} d\tau/2 = \frac{3}{2} \Phi'(n) -  \Phi'(n-1)/2
+\ee
+So simply by saving three potentials we can consistently compute everything we need, specially $\Phi'(n+1/2)$\\
+{\color{red} A great point: In this case of updating although we are updating two $\zeta$ one $\zeta{half}$ and $\zeta_{int}$ but for $\zeta{half}$ updating in the $\zeta'(n)$ in the non-linear part we have $\nabla (\Psi(n) + \zeta(n))$ which we have $\zeta(n)$ from previous step so we do not need predictor-corrector method!}
+Another discussion with Julian is,
+      \begin{figure} [H]
+ \includegraphics [scale=0.6]{Jul_dis_0030}
+ \end{figure}
+	{\Large{No Still I have a problem!}}\\to update $\zeta_{int} (n+1)$ from $\zeta(n)$ and $\zeta'(n+1/2)$ we need $\pi(n+1/2)$, $\nabla \pi(n+1/2) $ and etc, which is a big mess!
+	 Because  
+      \subsection{Non-linear terms tests: {\color{red} How?}}
+      Here we aim to check the non-linear terms alone, just to make sure everything is correctly computed or we did not forgot any trivial point.
+      What we are going to do is solving the below two equations in mathematica and Gevolution to see if we get reasonable results! We believe that these two equations are enough to be solved, since all other terms look like one of these two terms and also we have already checked that $\zeta$ and $\pi$ up to a great order agree in mathematica and Gevolution, but maybe it would be good check to put all the possible terms together to see if we can solve in mathematica?
+          \be
+  \pi' = \zeta + \Psi - \mathcal{H} \pi
+  \ee
+
+           \be
+      \zeta' = \mathcal{H}  \nabla \pi. \nabla \pi
+      \ee
+      \be
+      \zeta' = c_s^2 \Phi (\nabla \pi)^2
+      \ee
+Unfortunately, I do not know how to solve in matehamtica to compare with the result of Gevolution!
+\subsection{Predictor-corrector method}
+Here we try to measure the effect of non-linear terms. Before doing it we first check if predictor-corrector method works well? \\
+To do, we measure how many times it goes through predictor-corrector method to converge?\\
+After doing some experiments, it seems that it works well! So for demanding precision like $10^{-10}$ which is actually the relative improvement, it just go through the loop once mostly or  twice and some times specially low redshifts it must go 10 times in the loop to reach the precision, so it hits precision error in low redshifts. \\
+As an example when we ask for the the relative precision of $10^{-8}$ and ask if the numerator was more than 6 print the precision we get the following result in the terminal,
+\begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+ numerator: 7 The rel diff: 7.00482e-10
+ numerator: 7 The rel diff: 8.28997e-10
+ numerator: 8 The rel diff: 6.95646e-10
+ numerator: 7 The rel diff: 6.65728e-10
+ numerator: 7 The rel diff: 3.09033e-09
+ numerator: 7 The rel diff: 1.9231e-09
+ numerator: 7 The rel diff: 3.23853e-09
+ numerator: 8 The rel diff: 6.69198e-10
+ numerator: 7 The rel diff: 1.74146e-09
+ numerator: 7 The rel diff: 6.87903e-10
+ numerator: 7 The rel diff: 7.36749e-10
+ numerator: 7 The rel diff: 2.34831e-09
+ numerator: 8 The rel diff: 6.397e-10
+ numerator: 7 The rel diff: 3.06782e-09
+ numerator: 7 The rel diff: 1.82822e-09
+ numerator: 7 The rel diff: 7.01182e-10
+  \end{lstlisting}
+  The numerator is the number of times which go through corrector loop to improve the variable! For the more realistic case we consider getting near to the previous one to $10^{-4}$ relative difference which is less than $1\%$, we see that it goes at most 4 times over the loop and if we ask for printing the values of numerator more than 4 we get,
+ \begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+cycle 90, background information: z = 1.85694, average T00 = 0.312045, background model = 0.312046
+ cycle 90, time integration information: max |v| = 0.00339536 (cdm Courant factor = 0.0648959), time step / Hubble time = 0.04
+ numerator: 5 The rel diff: 1.0313e-05
+ numerator: 5 The rel diff: 2.32914e-05
+ writing power spectra at z = 0.996995 (cycle 99), tau/boxsize = 18.0884
+ cycle 100, background information: z = 0.918918, average T00 = 0.312044, background model = 0.312046
+ cycle 100, time integration information: max |v| = 0.00415543 (cdm Courant factor = 0.087711), time step / Hubble time = 0.04
+ numerator: 5 The rel diff: 1.71626e-05
+ cycle 110, background information: z = 0.285983, average T00 = 0.312043, background model = 0.312046
+ cycle 110, time integration information: max |v| = 0.00598645 (cdm Courant factor = 0.124585), time step / Hubble time = 0.04
+ numerator: 5 The rel diff: 6.9317e-06
+ numerator: 5 The rel diff: 1.67579e-05
+ numerator: 5 The rel diff: 1.45638e-05
+  \end{lstlisting}
+  Which is just four times and at low redshifts! We also do not see numerator more than 5!
+  \subsection{Non-linear contribution in the code}
+To measure the non-linear terms contribution, we have couple of ways. One is comparing the the linear versus non-linear contribution plot on different variables...\\
+The other one is just internally look at the relative importance of non-linear terms in comparison with linear terms, so in $\zeta'$ we just measure the relative between non-linear terms and linear ones $\frac{\text{all non-linear contributions} -\text{all linear contributions} }{\text{all linear contributions}}$, which is as following,
+\be
+\frac{     \Big( +2 c_s^2  \Phi_{n+1}  {\nabla^2 \pi_{n+1} }  
+  %//////////////// 
+  -   (1-c_s^2)  \Psi_{n+1} {\nabla^2 \pi_{n+1}} \Big)
+  %////////////////
+      %////////////////
+       ...   \Big(  - 3 \mathcal{H}_{n+1} ( w \frac{\zeta_{n+\frac{1}{2}}}{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+... \Big)%//////////////// 
+       } 
+       { 3 \mathcal{H}_{n+1} ( w \frac{\zeta_{n+\frac{1}{2}}}{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  
++c_s^2 \nabla^2 \pi_{n+1}  }
+\ee
+what we get is somehow strange! So in different points of lattice we get the following terminal output for the quantity which shows the importance of non-linear terms!\begin{lstlisting}[language=C++,
+  basicstyle=\tiny]
+NL_REL: -2.36611
+NL_REL: -2.38774
+NL_REL: -2.29923
+NL_REL: -2.22916
+NL_REL: -2.18889
+NL_REL: -2.15739
+NL_REL: -2.31122
+NL_REL: -2.48264
+NL_REL: -2.54007
+NL_REL: -2.4611
+NL_REL: -2.47478
+NL_REL: -2.38359
+NL_REL: -2.35794
+NL_REL: -2.38377
+NL_REL: -2.4141
+NL_REL: -2.33127
+NL_REL: -2.29721
+NL_REL: -2.33786
+NL_REL: -2.33795
+NL_REL: -2.35654
+NL_REL: -2.30935
+NL_REL: -2.24938
+NL_REL: -2.30449
+NL_REL: -2.4566
+NL_REL: -2.37959
+NL_REL: -2.64718
+NL_REL: -2.40469
+NL_REL: -2.30812
+NL_REL: -2.44066
+NL_REL: -2.42957
+NL_REL: -2.24973
+NL_REL: -2.48907
+NL_REL: -2.41429
+NL_REL: -2.40282
+\end{lstlisting}
+the top results are related to the relative importance of non-linear terms in each point! The physical quantity we are interested in is the powerspectrum which is measured below.\\
+\end{document}

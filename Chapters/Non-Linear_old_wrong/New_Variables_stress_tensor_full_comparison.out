@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{ comparison}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Without sourcing total stress tensor }{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Kessence sourcing total stress tensor }{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Solving the full equation with potentials}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Field dynamics, Kessence stress tensor is turned off }{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.1}{ equation}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.2}{ equation}{subsection.2.1}% 7
+\BOOKMARK [1][-]{section.3}{Adding a function for getting field transfer function as the output }{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Field dynamics and stress tensor while kessence source gravity}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{The ratio of kess in Gevolution and total stress tensor compared with class for different cs2 limits}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Comparing class and Gevolution with initial condition from class red Must be completed for more redshift ranges and also big runs! }{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Checking the limit cs2 0 that we get kessence density as matter density }{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Non-linear contrubution}{}% 13
+\BOOKMARK [1][-]{section.6}{Sensitivity to initial conditions}{}% 14
+\BOOKMARK [1][-]{section.7}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 15
+\BOOKMARK [1][-]{section.8}{Trace the average of the perturbation to be consistent}{}% 16
+\BOOKMARK [1][-]{section.9}{Vector elliptic and vector parabolic consistency check}{}% 17

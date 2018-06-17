@@ -343,23 +343,23 @@ Here we try to compare mathematica with Gevolution in scalar fields solution whe
 
  \subsubsection{$\zeta$ equation}
   \be
-  \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} + \zeta'_{n} \Delta \tau
+  \zeta_{n+\frac{3}{2}}=\zeta_{n+\frac{1}{2}} + \zeta'_{n+1} \Delta \tau
   \ee
-  where $ \zeta'_{n}$ reads from the differential equation as following,
+  where $ \zeta'_{n+1}$ reads from the differential equation as following,
   \be
-  \zeta'_{n}=3 \mathcal{H}_{n}(w \zeta_{n} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
-  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n}
+  \zeta'_{n+1}=3 \mathcal{H}_{n+1}(w \zeta_{n+1} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1}
     \ee
-    Since we need to have $\zeta_n$ at $\zeta'_n$ so we write $\zeta_{n} = \frac{\zeta_{n+1/2} + \zeta_{n-1/2} }{2}$ \\ 
+    Since we need to have $\zeta_{n+1}$ at $\zeta'_{n+1}$ so we write $\zeta_{n+1} = \frac{\zeta_{n+3/2} + \zeta_{n+1/2} }{2}$ \\ 
     We get,
       \be
-  \zeta_{n+\frac{1}{2}}=\zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg [3 \mathcal{H}_{n}(w\frac{\zeta_{n+\frac{1}{2}} + \zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n}) -c_s^2(   3 \mathcal{H}^2_{n} 
-  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg] 
+  \zeta_{n+\frac{3}{2}}=\zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg [3 \mathcal{H}_{n+1}(w\frac{\zeta_{n+\frac{3}{2}} + \zeta_{n+\frac{1}{2}} }{2} +c_s^2 \Psi_{n+1}) -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} \Bigg] 
   \ee
   Simplifying the expression gives,
   \be
-   \zeta_{n+\frac{1}{2}}= \frac{1}{1-  3   \mathcal{H}_{n} w \Delta \tau/2 } \Bigg[ \zeta_{n-\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n}\Big( \frac{ w\zeta_{n-\frac{1}{2}} }{2} +c_s^2 \Psi_{n} \Big)  -c_s^2(   3 \mathcal{H}^2_{n} 
-  - 3 \mathcal{H}' _{n}) \pi_{n}+ 3 c_s^2 \Phi'_{n}  +c_s^2 \nabla^2 \pi_{n} \Bigg) \Bigg]
+   \zeta_{n+\frac{3}{2}}= \frac{1}{1-  3   \mathcal{H}_{n+1} w \Delta \tau/2 } \Bigg[ \zeta_{n+\frac{1}{2}} +  \Delta \tau \Bigg( 3 \mathcal{H}_{n+1}\Big( \frac{ w\zeta_{n+\frac{1}{2}} }{2} +c_s^2 \Psi_{n+1} \Big)  -c_s^2(   3 \mathcal{H}^2_{n+1} 
+  - 3 \mathcal{H}' _{n+1}) \pi_{n+1}+ 3 c_s^2 \Phi'_{n+1}  +c_s^2 \nabla^2 \pi_{n+1} \Bigg) \Bigg]
   \ee
 It is very important to check everything for the first loop specifically! For the first loop we have $\zeta^{(0)}$, $\zeta^{(-1/2)}$ is computed from the values at step 0 and then $\zeta$ is updated to have $\zeta^{(1/2)}$ from the values of $\Psi^{(0)}$ but we take $\Phi'^{(0)}=0$ which is an approximation in our scheme. Then we update $\pi$ to have it at step 1 and then we update $\zeta$ to have it at step $3/2$ during all of these procedures, $\Phi$ is assumed to be constant and we use $\Phi^{(1/2)}= \Phi^{(0)}$ since in the first loop $\Phi'$ is zero! So this is an approximation that in the first loop we take $\Psi'=0 $ and use the same $\Phi$ at 1/2 and 0 step the same. But in the other loops everything seems correct as following,
 \be
@@ -595,15 +595,24 @@ for i in range (1,7):
              \begin{figure}[H]
  \includegraphics[scale=0.5]{delta_m_kess_001} 
  \end{figure}
+ 
+ {\Large{
+ If we multiply to $1+w/(1-3w)$ we get the same plot, \\
+ Which also says that when the perturbations get non-linear, since for $w=-0.9$, because $\delta_m$ get non-linear about $z=37$ maybe? and then since $\delta_{kess}$ is suppressed by some factors (1/37), so it gets non-linear below than z=0 and we neve see it. \\
+ A good check: If multiply $\delta_k$ to $(1+w/(1-3w))$ we get the same behaviour which is consisten.
+\\
+So maybe check for some lower w, lwhich clusters better and sooner.
+ 
+ }}
         
-\subsection{Comparing class  and Gevolution with initial condition from class {\color{red} Must be completed for more redshift ranges and also big runs!} }
+\subsection{Comparing class  and Gevolution with initial condition from class {\color{red} Must be completed for more redshift ranges and also big runs!}   {(\color{red} TODO:)}  }
 Giving initial condition from Class, comparing Class with mathematica at redshift z=10 gives the following result which shows full agreement, Note that the initial condition of class and Gevolution are slightly different
              \begin{figure}[H]
  \includegraphics[scale=0.5]{fields_class_Gev} 
  \end{figure}
 {\color{red} Question: why we get less power at high wavenumbers in Gevolution than Class? Nyqvist frequency?}
-
-\subsection{Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density }
+{Martin: This is a good check, also if we have matter kessence instead of just matter we dont have shell crossing and we may get Black hole?!}
+\subsection{Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density  {(\color{red} TODO:)} }
 -For the limit $c_s^2 \to 0$ and $w \to 0$ check we get matter power from Gevolution compared with class!\\
 We have checked that we get such a behaviour in class, do we get in Gevolution too? For not very small $c_s^2$ yes, but it is also a good check to see this in smaller sound speeds.
 This is a consistency check but not so much necessary for our purposes!

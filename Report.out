@@ -101,16 +101,25 @@
 \BOOKMARK [1][-]{section.24}{Adding a function for getting field transfer function as the output }{}% 101
 \BOOKMARK [2][-]{subsection.24.1}{Field dynamics and stress tensor while kessence source gravity}{section.24}% 102
 \BOOKMARK [1][-]{section.25}{The ratio of kess in Gevolution and total stress tensor compared with class for different cs2 limits}{}% 103
-\BOOKMARK [2][-]{subsection.25.1}{Comparing class and Gevolution with initial condition from class red Must be completed for more redshift ranges and also big runs! }{section.25}% 104
-\BOOKMARK [2][-]{subsection.25.2}{Checking the limit cs2 0 that we get kessence density as matter density }{section.25}% 105
+\BOOKMARK [2][-]{subsection.25.1}{Comparing class and Gevolution with initial condition from class red Must be completed for more redshift ranges and also big runs! \(red TODO:\) }{section.25}% 104
+\BOOKMARK [2][-]{subsection.25.2}{Checking the limit cs2 0 that we get kessence density as matter density \(red TODO:\) }{section.25}% 105
 \BOOKMARK [1][-]{section.26}{Non-linear contrubution}{}% 106
-\BOOKMARK [1][-]{section.27}{Sensitivity to initial conditions}{}% 107
-\BOOKMARK [1][-]{section.28}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 108
-\BOOKMARK [1][-]{section.29}{Sensitivity to initial conditions}{}% 109
-\BOOKMARK [1][-]{section.30}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 110
-\BOOKMARK [1][-]{section.31}{Trace the average of the perturbation to be consistent}{}% 111
-\BOOKMARK [1][-]{section.32}{Vector elliptic and vector parabolic consistency check}{}% 112
-\BOOKMARK [1][-]{section.33}{Comparing fields and density of kessence in Gevolution versus class}{}% 113
-\BOOKMARK [1][-]{section.34}{Checking the effect of discrete lattice which Julian suggested? red Try to derive the result!}{}% 114
-\BOOKMARK [1][-]{section.35}{Comparing some important quantities in class and Gevolution for the same initial condition, like Hubble factor, matter power, potential power and ...}{}% 115
-\BOOKMARK [1][-]{section.36}{Kessence run-time}{}% 116
+\BOOKMARK [2][-]{subsection.26.1}{Solving the equation by leap-frog method}{section.26}% 107
+\BOOKMARK [3][-]{subsubsection.26.1.1}{ equation}{subsection.26.1}% 108
+\BOOKMARK [3][-]{subsubsection.26.1.2}{ equation}{subsection.26.1}% 109
+\BOOKMARK [1][-]{section.27}{Non-linear terms tests: red How?}{}% 110
+\BOOKMARK [2][-]{subsection.27.1}{Predictor-corrector method}{section.27}% 111
+\BOOKMARK [1][-]{section.28}{Non-linear contribution in the code}{}% 112
+\BOOKMARK [1][-]{section.29}{Linear and non-linear comparisons with class results}{}% 113
+\BOOKMARK [1][-]{section.30}{Sensitivity to initial conditions}{}% 114
+\BOOKMARK [1][-]{section.31}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 115
+\BOOKMARK [1][-]{section.32}{Solve the solution to non-linear terms in mathematica with Gevolution}{}% 116
+\BOOKMARK [1][-]{section.33}{Measuring the average of field in Gevolution to see the backreacktion}{}% 117
+\BOOKMARK [1][-]{section.34}{Sensitivity to initial conditions}{}% 118
+\BOOKMARK [1][-]{section.35}{The effect of non linearities on gravitational potential at some different redshifts \040and matter power spectrum}{}% 119
+\BOOKMARK [1][-]{section.36}{Trace the average of the perturbation to be consistent}{}% 120
+\BOOKMARK [1][-]{section.37}{Vector elliptic and vector parabolic consistency check}{}% 121
+\BOOKMARK [1][-]{section.38}{Comparing fields and density of kessence in Gevolution versus class}{}% 122
+\BOOKMARK [1][-]{section.39}{Checking the effect of discrete lattice which Julian suggested? red Try to derive the result!}{}% 123
+\BOOKMARK [1][-]{section.40}{Comparing some important quantities in class and Gevolution for the same initial condition, like Hubble factor, matter power, potential power and ...}{}% 124
+\BOOKMARK [1][-]{section.41}{Kessence run-time}{}% 125

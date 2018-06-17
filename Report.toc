@@ -123,16 +123,26 @@
 \contentsline {section}{\numberline {24}Adding a function for getting field transfer function as the output }{175}{section.24}
 \contentsline {subsection}{\numberline {24.1}Field dynamics and stress tensor while kessence source gravity}{178}{subsection.24.1}
 \contentsline {section}{\numberline {25}The ratio of $\delta _{kess}$ in Gevolution and total stress tensor compared with class for different $c_s^2$ limits}{180}{section.25}
-\contentsline {subsection}{\numberline {25.1}Comparing class and Gevolution with initial condition from class {\color {red} Must be completed for more redshift ranges and also big runs!} }{181}{subsection.25.1}
-\contentsline {subsection}{\numberline {25.2}Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density }{182}{subsection.25.2}
+\contentsline {subsection}{\numberline {25.1}Comparing class and Gevolution with initial condition from class {\color {red} Must be completed for more redshift ranges and also big runs!} {(\color {red} TODO:)} }{181}{subsection.25.1}
+\contentsline {subsection}{\numberline {25.2}Checking the limit $c_s^2 \to 0$ that we get kessence density as matter density {(\color {red} TODO:)} }{182}{subsection.25.2}
 \contentsline {section}{\numberline {26}Non-linear contrubution}{184}{section.26}
-\contentsline {section}{\numberline {27}Sensitivity to initial conditions}{185}{section.27}
-\contentsline {section}{\numberline {28}The effect of non linearities on gravitational potential at some different redshifts $\Psi $ and matter power spectrum}{185}{section.28}
-\contentsline {section}{\numberline {29}Sensitivity to initial conditions}{186}{section.29}
-\contentsline {section}{\numberline {30}The effect of non linearities on gravitational potential at some different redshifts $\Psi $ and matter power spectrum}{186}{section.30}
-\contentsline {section}{\numberline {31}Trace the average of the perturbation to be consistent}{186}{section.31}
-\contentsline {section}{\numberline {32}Vector elliptic and vector parabolic consistency check}{186}{section.32}
-\contentsline {section}{\numberline {33}Comparing fields and density of kessence in Gevolution versus class}{186}{section.33}
-\contentsline {section}{\numberline {34}Checking the effect of discrete lattice which Julian suggested? {\color {red} Try to derive the result!}}{187}{section.34}
-\contentsline {section}{\numberline {35}Comparing some important quantities in class and Gevolution for the same initial condition, like Hubble factor, matter power, potential power and ...}{190}{section.35}
-\contentsline {section}{\numberline {36}Kessence run-time}{191}{section.36}
+\contentsline {subsection}{\numberline {26.1}Solving the equation by leap-frog method}{187}{subsection.26.1}
+\contentsline {subsubsection}{\numberline {26.1.1}$\pi $ equation}{187}{subsubsection.26.1.1}
+\contentsline {subsubsection}{\numberline {26.1.2}$\zeta $ equation}{188}{subsubsection.26.1.2}
+\contentsline {paragraph}{\numberline {26.1.2.1}Predictor-corrector method}{193}{paragraph.26.1.2.1}
+\contentsline {section}{\numberline {27}Non-linear terms tests: {\color {red} How?}}{195}{section.27}
+\contentsline {subsection}{\numberline {27.1}Predictor-corrector method}{195}{subsection.27.1}
+\contentsline {section}{\numberline {28}Non-linear contribution in the code}{196}{section.28}
+\contentsline {section}{\numberline {29}Linear and non-linear comparisons with class results}{197}{section.29}
+\contentsline {section}{\numberline {30}Sensitivity to initial conditions}{197}{section.30}
+\contentsline {section}{\numberline {31}The effect of non linearities on gravitational potential at some different redshifts $\Psi $ and matter power spectrum}{198}{section.31}
+\contentsline {section}{\numberline {32}Solve the solution to non-linear terms in mathematica with Gevolution}{198}{section.32}
+\contentsline {section}{\numberline {33}Measuring the average of field in Gevolution to see the backreacktion}{198}{section.33}
+\contentsline {section}{\numberline {34}Sensitivity to initial conditions}{199}{section.34}
+\contentsline {section}{\numberline {35}The effect of non linearities on gravitational potential at some different redshifts $\Psi $ and matter power spectrum}{199}{section.35}
+\contentsline {section}{\numberline {36}Trace the average of the perturbation to be consistent}{199}{section.36}
+\contentsline {section}{\numberline {37}Vector elliptic and vector parabolic consistency check}{199}{section.37}
+\contentsline {section}{\numberline {38}Comparing fields and density of kessence in Gevolution versus class}{199}{section.38}
+\contentsline {section}{\numberline {39}Checking the effect of discrete lattice which Julian suggested? {\color {red} Try to derive the result!}}{200}{section.39}
+\contentsline {section}{\numberline {40}Comparing some important quantities in class and Gevolution for the same initial condition, like Hubble factor, matter power, potential power and ...}{203}{section.40}
+\contentsline {section}{\numberline {41}Kessence run-time}{204}{section.41}
