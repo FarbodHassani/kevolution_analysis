@@ -233,6 +233,66 @@
 %}
 \begin{document}
 \section{Turning off the potentials and compare the linear and non-linear equations versus mathematica and quantify the error}
+\subsection{Linear equations comparison}
+First we make the files with the same setting as Gevolution containing fields and stress tensor information from standard output of class, as it is already explained we make $\pi$ and $\zeta$ field at different redshifts for comparing as well as providing the initial condition.
+We try to compare the linear result of Gevolution with class for different precision parameters and we also compare most interesting parameters.\\
+We see somehow good agreement between the results, lets do some convergence tests,
+  \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_16_Nkess_1.jpg}
+ \end{figure}
+ \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_16_Nkess_10.jpg}
+ \end{figure}
+  \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_32_Nkess_10.jpg}
+ \end{figure}
+  \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_256_Nkess_10.jpg}
+ \end{figure}
+Which basically shows that increasing $nkess$ doe not change the result so much at least fo this very small run.\\
+Some convergence tests on the Piz-Daint, give
+  \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_1024_Nkess_10_DT_04.jpg}
+ \end{figure}
+ decreasing the time step,
+   \begin{figure} [H]
+ \includegraphics [scale=0.3]{Run_compLinear_Gev_Ngrid_1024_Nkess_10_DT_01.jpg}
+ \end{figure}
+    \begin{figure} [H]
+ \includegraphics [scale=0.3]{Convergence_test_errors.jpg}
+ \end{figure}
+
+ 
+%Some runs information,
+%For the linear run with tiling factor = 64, $Nkessence=10$, $Ngrid=256$ and Boxsize=500
+%\begin{lstlisting}[language=C++,
+%  basicstyle=\tiny]
+%BENCHMARK
+%total execution time  : 6:30:22.3
+%total number of cycles: 129
+%time consumption breakdown:
+%initialization   : 0:03:13.0 ; 0.824143%.
+%main loop        : 6:23:06.6 ; 98.1396%.
+%----------- main loop: components -----------
+%projections                : 0:40:48.0 ; 10.6497%.
+%Kessence_update                : 1:35:32.4 ; 24.9383%.
+%snapshot outputs           : 0:00:00.0 ; 8.14206e-07%.
+%power spectra outputs      : 0:04:29.1 ; 1.17082%.
+%update momenta (count: 129): 0:26:50.1 ; 7.0047%.
+%move particles (count: 129): 0:44:45.7 ; 11.6839%.
+%gravity solver             : 2:53:03.5 ; 45.1719%.
+%-- thereof Fast Fourier Transforms (count: 1558): 1:44:17.7 ; 60.266%.
+%\end{lstlisting}
+%And for the non-linear run with the same setting we have,
+%\begin{lstlisting}[language=C++,
+%  basicstyle=\tiny]
+%
+%  \end{lstlisting}
+  
+\subsection{Non-Linear equations comparison}
+We exactly plot the same figures but for non-linear compared with the best linear result from Gevolution (Ngrid=256),
+
+
 \section{Convergence tests, to see if by increasing precision in the Gevolution we get better results with respect to linear, which is a test of method too}
  \section{Linear Gevolution comparisons with class results}
  The plots are :  Linear $\delta$ and $\theta$ of kessence and $\delta$ of matter in Gevolution and class,\\
